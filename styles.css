@@ -256,13 +256,13 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -273,8 +273,8 @@ body::before {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .nav-mobile-btn .close-icon {
@@ -352,7 +352,7 @@ body::before {
 
 /* Hero Section */
 .hero-section {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   position: relative;
@@ -360,6 +360,7 @@ body::before {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.01) 100%);
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
+  padding: var(--space-xl) 0;
 }
 
 .hero-section::before {
@@ -384,23 +385,20 @@ body::before {
 
 .hero-text {
   max-width: 800px;
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-xl);
 }
 
 .hero-title {
-  font-size: clamp(3rem, 8vw, 8rem);
+  font-size: clamp(2.5rem, 6vw, 6rem);
   font-family: var(--font-serif);
   font-weight: 600;
-  line-height: 0.85;
+  line-height: 0.9;
   letter-spacing: -0.02em;
   text-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-lg);
   color: var(--foreground) !important;
   background: none !important;
   -webkit-background-clip: initial !important;
-  -webkit-text-fill-color: initial !important;
-  background-clip: initial !important;
-  position: relative;
 }
 
 .hero-title-line {
@@ -428,25 +426,19 @@ body::before {
 }
 
 .hero-subtitle {
-  font-size: clamp(1.125rem, 2.5vw, 1.25rem);
-  color: var(--muted-foreground);
+  font-size: 1.125rem;
   line-height: 1.6;
-  margin-bottom: var(--space-xl);
-  opacity: 0;
-  transform: translateY(30px);
-  animation: slideUp 1s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards;
+  color: var(--muted-foreground);
+  margin-bottom: var(--space-lg);
   max-width: 600px;
-  position: relative;
+  font-weight: 400;
 }
 
 .hero-metrics {
   display: flex;
-  gap: var(--space-xl);
-  margin-bottom: var(--space-2xl);
-  opacity: 0;
-  transform: translateY(30px);
-  animation: slideUp 1s cubic-bezier(0.4, 0, 0.2, 1) 0.8s forwards;
-  position: relative;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+  flex-wrap: wrap;
 }
 
 .metric-item {
@@ -455,13 +447,14 @@ body::before {
   -webkit-backdrop-filter: blur(2px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
-  padding: var(--space-lg);
+  padding: var(--space-md);
   text-align: center;
   transition: transform 0.2s ease-out;
   position: relative;
   overflow: hidden;
   transform: translateZ(0);
   will-change: transform;
+  min-width: 120px;
 }
 
 .metric-item:hover {
