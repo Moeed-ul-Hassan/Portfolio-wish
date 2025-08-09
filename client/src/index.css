@@ -1,65 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --background: hsl(0, 0%, 100%);
-  --foreground: hsl(222, 22%, 8%);
+  --foreground: hsl(0, 0%, 9%);
   --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(222, 22%, 8%);
+  --card-foreground: hsl(0, 0%, 9%);
   --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(222, 22%, 8%);
-  --primary: hsl(242, 85%, 67%);
-  --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(261, 83%, 63%);
-  --secondary-foreground: hsl(0, 0%, 100%);
-  --muted: hsl(210, 40%, 98%);
-  --muted-foreground: hsl(215, 16%, 47%);
-  --accent: hsl(159, 81%, 37%);
-  --accent-foreground: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(0, 0%, 9%);
+  --primary: hsl(0, 0%, 9%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(0, 0%, 96%);
+  --secondary-foreground: hsl(0, 0%, 9%);
+  --muted: hsl(0, 0%, 96%);
+  --muted-foreground: hsl(0, 0%, 45%);
+  --accent: hsl(0, 0%, 96%);
+  --accent-foreground: hsl(0, 0%, 9%);
   --destructive: hsl(0, 84%, 60%);
-  --destructive-foreground: hsl(0, 0%, 100%);
-  --border: hsl(214, 32%, 91%);
-  --input: hsl(214, 32%, 91%);
-  --ring: hsl(242, 85%, 67%);
-  --chart-1: hsl(242, 85%, 67%);
-  --chart-2: hsl(159, 81%, 37%);
-  --chart-3: hsl(32, 98%, 83%);
-  --chart-4: hsl(47, 92%, 56%);
-  --chart-5: hsl(340, 75%, 51%);
-  
-  /* Custom colors from design */
-  --gradient-start: hsl(242, 85%, 67%);
-  --gradient-end: hsl(261, 83%, 63%);
-  --surface-elevated: hsl(0, 0%, 98%);
-  --text-tertiary: hsl(215, 16%, 65%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --border: hsl(0, 0%, 90%);
+  --input: hsl(0, 0%, 96%);
+  --ring: hsl(0, 0%, 9%);
   
   /* Typography */
   --font-sans: 'Inter', system-ui, sans-serif;
-  --radius: 0.75rem;
+  --font-serif: 'Playfair Display', serif;
+  --radius: 0.5rem;
 }
 
 .dark {
-  --background: hsl(222, 22%, 8%);
-  --foreground: hsl(210, 40%, 98%);
-  --card: hsl(222, 22%, 10%);
-  --card-foreground: hsl(210, 40%, 98%);
-  --popover: hsl(222, 22%, 8%);
-  --popover-foreground: hsl(210, 40%, 98%);
-  --primary: hsl(242, 85%, 67%);
-  --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(261, 83%, 63%);
-  --secondary-foreground: hsl(0, 0%, 100%);
-  --muted: hsl(217, 32%, 17%);
-  --muted-foreground: hsl(215, 16%, 57%);
-  --accent: hsl(159, 81%, 37%);
-  --accent-foreground: hsl(0, 0%, 100%);
+  --background: hsl(0, 0%, 3%);
+  --foreground: hsl(0, 0%, 98%);
+  --card: hsl(0, 0%, 6%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --popover: hsl(0, 0%, 3%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --primary: hsl(0, 0%, 98%);
+  --primary-foreground: hsl(0, 0%, 9%);
+  --secondary: hsl(0, 0%, 14%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --muted: hsl(0, 0%, 14%);
+  --muted-foreground: hsl(0, 0%, 63%);
+  --accent: hsl(0, 0%, 14%);
+  --accent-foreground: hsl(0, 0%, 98%);
   --destructive: hsl(0, 62%, 30%);
-  --destructive-foreground: hsl(0, 0%, 100%);
-  --border: hsl(217, 32%, 17%);
-  --input: hsl(217, 32%, 17%);
-  --ring: hsl(242, 85%, 67%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --border: hsl(0, 0%, 14%);
+  --input: hsl(0, 0%, 14%);
+  --ring: hsl(0, 0%, 98%);
 }
 
 @layer base {
@@ -69,58 +59,85 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'clig' 1, 'calt' 1;
   }
 
   html {
     scroll-behavior: smooth;
   }
+  
+  /* Subtle background pattern */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    background-image: radial-gradient(circle at 1px 1px, var(--foreground) 1px, transparent 0);
+    background-size: 20px 20px;
+    pointer-events: none;
+    z-index: -1;
+  }
 }
 
 @layer utilities {
-  .gradient-text {
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .font-serif {
+    font-family: var(--font-serif);
   }
   
-  .animate-fade-in-up {
-    animation: fadeInUp 0.6s ease-out;
+  .animate-fade-in {
+    animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
-  .animate-slide-in-right {
-    animation: slideInRight 0.8s ease-out;
+  .animate-slide-up {
+    animation: slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
-  .backdrop-blur-glass {
-    backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(255, 255, 255, 0.75);
+  .animate-stagger {
+    animation: slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
-  .dark .backdrop-blur-glass {
-    background-color: rgba(17, 25, 40, 0.75);
+  .animate-stagger:nth-child(1) { animation-delay: 0.1s; }
+  .animate-stagger:nth-child(2) { animation-delay: 0.2s; }
+  .animate-stagger:nth-child(3) { animation-delay: 0.3s; }
+  .animate-stagger:nth-child(4) { animation-delay: 0.4s; }
+  .animate-stagger:nth-child(5) { animation-delay: 0.5s; }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glass {
+    backdrop-filter: blur(12px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .dark .glass {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
 
-@keyframes fadeInUp {
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
   }
 }
 
