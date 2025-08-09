@@ -9,10 +9,14 @@ const skipLink = document.getElementById('skip-link');
 // Performance optimizations and enhanced interactions for FAANG/MAANG impact
 let lastScrollY = 0;
 let ticking = false;
+let scrollDirection = 'down';
 
 // Enhanced scroll performance with RAF
 function handleScroll() {
-    lastScrollY = window.scrollY;
+    const currentScrollY = window.scrollY;
+    scrollDirection = currentScrollY > lastScrollY ? 'down' : 'up';
+    lastScrollY = currentScrollY;
+    
     if (!ticking) {
         requestAnimationFrame(() => {
             updateNavigation();
@@ -22,12 +26,20 @@ function handleScroll() {
     }
 }
 
-// Update navigation with smooth transitions
+// Update navigation with smooth transitions and blur effects
 function updateNavigation() {
-    if (lastScrollY > 50) {
+    const scrolled = lastScrollY > 50;
+    const scrolledUp = scrollDirection === 'up' && lastScrollY > 100;
+    
+    if (scrolled) {
         navigation.classList.add('scrolled');
+        if (scrolledUp) {
+            navigation.classList.remove('scrolled-up');
+        } else {
+            navigation.classList.add('scrolled-up');
+        }
     } else {
-        navigation.classList.remove('scrolled');
+        navigation.classList.remove('scrolled', 'scrolled-up');
     }
 }
 
@@ -42,29 +54,40 @@ function setupIntersectionObserver() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate-in');
+                // Add blur effect on scroll
+                if (entry.target.classList.contains('project-item') || 
+                    entry.target.classList.contains('about-item') ||
+                    entry.target.classList.contains('metric-item')) {
+                    entry.target.style.backdropFilter = 'blur(12px)';
+                    entry.target.style.webkitBackdropFilter = 'blur(12px)';
+                }
             }
         });
     }, observerOptions);
 
     // Observe all elements that need animation
-    const animatedElements = document.querySelectorAll('.project-item, .about-item, .metric-item');
+    const animatedElements = document.querySelectorAll('.project-item, .about-item, .metric-item, .contact-item');
     animatedElements.forEach(el => observer.observe(el));
 }
 
-// Enhanced metric animations
+// Enhanced metric animations with blur effects
 function animateMetrics() {
-    const metrics = document.querySelectorAll('.metric-value');
+    const metrics = document.querySelectorAll('.metric-item');
     metrics.forEach((metric, index) => {
-        const finalValue = metric.textContent;
+        const metricValue = metric.querySelector('.metric-value');
+        const finalValue = metricValue.textContent;
         const numericValue = parseInt(finalValue.replace(/[^\d]/g, ''));
         
         if (!isNaN(numericValue)) {
-            animateNumber(metric, 0, numericValue, 2000, index * 200);
+            // Add blur effect during animation
+            metric.style.backdropFilter = 'blur(16px)';
+            metric.style.webkitBackdropFilter = 'blur(16px)';
+            animateNumber(metricValue, 0, numericValue, 2000, index * 200);
         }
     });
 }
 
-// Number animation function
+// Number animation function with enhanced transitions
 function animateNumber(element, start, end, duration, delay) {
     setTimeout(() => {
         const startTime = performance.now();
@@ -81,6 +104,13 @@ function animateNumber(element, start, end, duration, delay) {
             
             if (progress < 1) {
                 requestAnimationFrame(updateNumber);
+            } else {
+                // Add final blur effect
+                const metricItem = element.closest('.metric-item');
+                if (metricItem) {
+                    metricItem.style.backdropFilter = 'blur(12px)';
+                    metricItem.style.webkitBackdropFilter = 'blur(12px)';
+                }
             }
         }
         
@@ -88,27 +118,63 @@ function animateNumber(element, start, end, duration, delay) {
     }, delay);
 }
 
-// Enhanced project interactions
+// Enhanced project interactions with blur effects
 function setupProjectInteractions() {
     const projects = document.querySelectorAll('.project-item');
     
     projects.forEach(project => {
         project.addEventListener('mouseenter', () => {
             project.style.transform = 'translateY(-8px) scale(1.02)';
+            project.style.backdropFilter = 'blur(16px)';
+            project.style.webkitBackdropFilter = 'blur(16px)';
+            project.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(255, 255, 255, 0.2)';
         });
         
         project.addEventListener('mouseleave', () => {
             project.style.transform = 'translateY(0) scale(1)';
+            project.style.backdropFilter = 'blur(12px)';
+            project.style.webkitBackdropFilter = 'blur(12px)';
+            project.style.boxShadow = 'none';
         });
+    });
+}
+
+// Enhanced mobile menu with blur effects
+function setupMobileMenu() {
+    if (!mobileMenuBtn || !mobileMenu) return;
+    
+    mobileMenuBtn.addEventListener('click', () => {
+        const isActive = mobileMenuBtn.classList.contains('active');
         
-        // Add keyboard navigation
-        project.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                const link = project.querySelector('.project-details-btn');
-                if (link) link.click();
-            }
-        });
+        if (isActive) {
+            mobileMenuBtn.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+            // Add blur effect when closing
+            mobileMenu.style.backdropFilter = 'blur(0px)';
+            mobileMenu.style.webkitBackdropFilter = 'blur(0px)';
+        } else {
+            mobileMenuBtn.classList.add('active');
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            // Add blur effect when opening
+            mobileMenu.style.backdropFilter = 'blur(24px)';
+            mobileMenu.style.webkitBackdropFilter = 'blur(24px)';
+        }
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+            mobileMenuBtn.click();
+        }
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target) && mobileMenu.classList.contains('active')) {
+            mobileMenuBtn.click();
+        }
     });
 }
 
@@ -149,30 +215,6 @@ function showToast(message, type = 'success') {
     setTimeout(() => {
         toast.classList.remove('show');
     }, 5000);
-}
-
-// Enhanced mobile menu with better accessibility
-function setupMobileMenu() {
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
-    
-    // Close menu on escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
-            toggleMobileMenu();
-        }
-    });
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-            if (mobileMenu.classList.contains('active')) {
-                toggleMobileMenu();
-            }
-        }
-    });
 }
 
 // Enhanced smooth scrolling with better performance
