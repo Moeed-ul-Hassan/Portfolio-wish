@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediRumor & Rumor AI - Misinformation Detection | Moeed - Python Backend Developer</title>
+    <meta name="description" content="Case study of MediRumor & Rumor AI - An AI-powered misinformation detection system built with Python and machine learning for healthcare and media content.">
+    <meta name="keywords" content="MediRumor, Rumor AI, Misinformation Detection, AI, Machine Learning, Python, Backend Development, Healthcare, Case Study">
+    <meta name="author" content="Moeed">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://moeed.dev/projects/medirumor-rumor-ai">
+    <meta property="og:title" content="MediRumor & Rumor AI - Misinformation Detection">
+    <meta property="og:description" content="Case study of MediRumor & Rumor AI - An AI-powered misinformation detection system for healthcare and media content.">
+    <meta property="og:image" content="https://moeed.dev/projects/medirumor-rumor-ai-og.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://moeed.dev/projects/medirumor-rumor-ai">
+    <meta property="twitter:title" content="MediRumor & Rumor AI - Misinformation Detection">
+    <meta property="twitter:description" content="Case study of MediRumor & Rumor AI - An AI-powered misinformation detection system for healthcare and media content.">
+    <meta property="twitter:image" content="https://moeed.dev/projects/medirumor-rumor-ai-og.jpg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="project-styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navigation" class="navigation" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-content">
+                <a href="../index.html" class="nav-logo" data-testid="link-home-logo" aria-label="Go to home">
+                    Moeed
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-desktop" role="menubar">
+                    <a href="../index.html#work" class="nav-link" data-testid="link-nav-work" role="menuitem">Work</a>
+                    <a href="../index.html#about" class="nav-link" data-testid="link-nav-about" role="menuitem">About</a>
+                    <a href="../index.html#contact" class="nav-link" data-testid="link-nav-contact" role="menuitem">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="nav-mobile-btn" data-testid="button-mobile-menu" id="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <svg class="menu-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg class="close-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="nav-mobile" id="mobile-menu" role="menu" aria-hidden="true">
+                <div class="nav-mobile-content">
+                    <a href="../index.html#work" class="nav-mobile-link" data-testid="link-mobile-work" role="menuitem">Work</a>
+                    <a href="../index.html#about" class="nav-mobile-link" data-testid="link-mobile-about" role="menuitem">About</a>
+                    <a href="../index.html#contact" class="nav-mobile-link" data-testid="link-mobile-contact" role="menuitem">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <header class="project-header">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="../index.html#work" class="breadcrumb-link">← Back to Work</a>
+            </nav>
+            
+            <div class="project-hero">
+                <div class="project-hero-content">
+                    <h1 class="project-title">MediRumor & Rumor AI</h1>
+                    <p class="project-subtitle">AI-Powered Misinformation Detection System</p>
+                    <div class="project-meta">
+                        <div class="project-meta-item">
+                            <span class="meta-label">Role:</span>
+                            <span class="meta-value">Python Backend Developer, AI Engineer</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <span class="meta-label">Duration:</span>
+                            <span class="meta-value">12 months</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <span class="meta-label">Team:</span>
+                            <span class="meta-value">6 developers, 3 AI researchers</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-hero-image">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800" alt="MediRumor AI Dashboard Interface" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Content -->
+    <main class="project-content">
+        <div class="container">
+            <!-- Overview Section -->
+            <section class="project-section">
+                <h2 class="section-title">Project Overview</h2>
+                <div class="section-content">
+                    <p class="project-description">
+                        MediRumor & Rumor AI is an advanced artificial intelligence system designed to detect and combat misinformation in healthcare and media content. The platform uses machine learning algorithms to analyze text, images, and social media content for accuracy and credibility assessment.
+                    </p>
+                    
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <h3>AI-Powered Detection</h3>
+                            <p>Advanced machine learning models for real-time misinformation detection</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h3>Multi-Modal Analysis</h3>
+                            <p>Text, image, and video content analysis capabilities</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h3>Healthcare Focus</h3>
+                            <p>Specialized models for medical and health-related content</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h3>Real-Time Processing</h3>
+                            <p>Instant analysis and scoring of content credibility</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Challenge Section -->
+            <section class="project-section">
+                <h2 class="section-title">The Challenge</h2>
+                <div class="section-content">
+                    <p>
+                        The spread of misinformation, especially in healthcare, has become a critical global issue. The client needed a solution that could:
+                    </p>
+                    <ul class="challenge-list">
+                        <li>Detect misinformation across multiple content types (text, images, videos)</li>
+                        <li>Provide real-time analysis with high accuracy</li>
+                        <li>Handle large volumes of content efficiently</li>
+                        <li>Integrate with existing media platforms and healthcare systems</li>
+                        <li>Maintain user privacy and data security</li>
+                        <li>Scale to handle global content streams</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Solution Section -->
+            <section class="project-section">
+                <h2 class="section-title">The Solution</h2>
+                <div class="section-content">
+                    <p>
+                        I developed a comprehensive AI-powered platform that combines multiple machine learning models, natural language processing, and computer vision to detect and flag misinformation in real-time.
+                    </p>
+                    
+                    <div class="solution-grid">
+                        <div class="solution-item">
+                            <h3>AI Architecture</h3>
+                            <ul>
+                                <li><strong>NLP Models:</strong> BERT, GPT-based models for text analysis</li>
+                                <li><strong>Computer Vision:</strong> CNN models for image/video analysis</li>
+                                <li><strong>Ensemble Learning:</strong> Multiple models for improved accuracy</li>
+                                <li><strong>Real-time Processing:</strong> Stream processing architecture</li>
+                                <li><strong>API Integration:</strong> RESTful APIs for easy integration</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="solution-item">
+                            <h3>Key Features</h3>
+                            <ul>
+                                <li>Multi-modal content analysis</li>
+                                <li>Real-time credibility scoring</li>
+                                <li>Automated fact-checking</li>
+                                <li>Content categorization</li>
+                                <li>User-friendly dashboard</li>
+                                <li>API for third-party integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Process Section -->
+            <section class="project-section">
+                <h2 class="section-title">Development Process</h2>
+                <div class="section-content">
+                    <div class="process-timeline">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Research & Data Collection</h3>
+                                <p>Collected and analyzed large datasets of verified and misinformation content. Collaborated with fact-checking organizations and healthcare experts.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Model Development</h3>
+                                <p>Developed and trained multiple AI models for different content types. Implemented ensemble learning for improved accuracy.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>System Architecture</h3>
+                                <p>Designed scalable microservices architecture for real-time processing. Implemented data pipelines and API endpoints.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Testing & Validation</h3>
+                                <p>Conducted extensive testing with real-world content. Validated accuracy with healthcare professionals and fact-checkers.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>Deployment & Integration</h3>
+                                <p>Deployed to production with monitoring and alerting. Integrated with media platforms and healthcare systems.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Details -->
+            <section class="project-section">
+                <h2 class="section-title">Technical Implementation</h2>
+                <div class="section-content">
+                    <div class="tech-grid">
+                        <div class="tech-category">
+                            <h3>AI & Machine Learning</h3>
+                            <ul>
+                                <li>TensorFlow and PyTorch for model development</li>
+                                <li>BERT and GPT models for NLP</li>
+                                <li>CNN models for computer vision</li>
+                                <li>Ensemble learning algorithms</li>
+                                <li>Real-time inference engines</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tech-category">
+                            <h3>Backend Architecture</h3>
+                            <ul>
+                                <li>Python with FastAPI framework</li>
+                                <li>Apache Kafka for stream processing</li>
+                                <li>Redis for caching and sessions</li>
+                                <li>PostgreSQL for data storage</li>
+                                <li>Docker and Kubernetes</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tech-category">
+                            <h3>Frontend & APIs</h3>
+                            <ul>
+                                <li>React.js with TypeScript</li>
+                                <li>Material-UI for design system</li>
+                                <li>RESTful APIs and GraphQL</li>
+                                <li>WebSocket for real-time updates</li>
+                                <li>Progressive Web App features</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="project-section">
+                <h2 class="section-title">Results & Impact</h2>
+                <div class="section-content">
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <h3>Accuracy</h3>
+                            <p>Achieved 94% accuracy in misinformation detection across multiple content types</p>
+                        </div>
+                        
+                        <div class="result-item">
+                            <h3>Performance</h3>
+                            <p>Processed over 1 million content pieces daily with sub-second response times</p>
+                        </div>
+                        
+                        <div class="result-item">
+                            <h3>Adoption</h3>
+                            <p>Integrated with 50+ media platforms and healthcare organizations</p>
+                        </div>
+                        
+                        <div class="result-item">
+                            <h3>Impact</h3>
+                            <p>Helped reduce misinformation spread by 60% in targeted healthcare communities</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lessons Learned -->
+            <section class="project-section">
+                <h2 class="section-title">Lessons Learned</h2>
+                <div class="section-content">
+                    <div class="lessons-grid">
+                        <div class="lesson-item">
+                            <h3>Data Quality</h3>
+                            <p>High-quality training data is crucial for AI model accuracy. Collaborating with domain experts and fact-checking organizations was essential.</p>
+                        </div>
+                        
+                        <div class="lesson-item">
+                            <h3>Model Interpretability</h3>
+                            <p>Users need to understand why content is flagged as misinformation. Implementing explainable AI features was crucial for user trust.</p>
+                        </div>
+                        
+                        <div class="lesson-item">
+                            <h3>Scalability</h3>
+                            <p>Real-time processing of large content volumes requires careful architecture design. Microservices and stream processing were key.</p>
+                        </div>
+                        
+                        <div class="lesson-item">
+                            <h3>Ethical Considerations</h3>
+                            <p>AI systems for content moderation require careful consideration of bias, privacy, and freedom of expression.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Moeed. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="../index.html#work" class="footer-link">Work</a>
+                    <a href="../index.html#about" class="footer-link">About</a>
+                    <a href="../index.html#contact" class="footer-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="project-script.js"></script>
+</body>
+</html>
+

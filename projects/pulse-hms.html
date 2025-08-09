@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse HMS - Health Management SaaS | Moeed - Python Backend Developer</title>
+    <meta name="description" content="Case study of Pulse HMS - A comprehensive Health Management SaaS platform built with Python and modern backend technologies for healthcare providers.">
+    <meta name="keywords" content="Pulse HMS, Health Management, SaaS, Healthcare, Case Study, Python Backend Development">
+    <meta name="author" content="Moeed">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://moeed.dev/projects/pulse-hms">
+    <meta property="og:title" content="Pulse HMS - Health Management SaaS">
+    <meta property="og:description" content="Case study of Pulse HMS - A comprehensive Health Management SaaS platform built with modern technologies for healthcare providers.">
+    <meta property="og:image" content="https://moeed.dev/projects/pulse-hms-og.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://moeed.dev/projects/pulse-hms">
+    <meta property="twitter:title" content="Pulse HMS - Health Management SaaS">
+    <meta property="twitter:description" content="Case study of Pulse HMS - A comprehensive Health Management SaaS platform built with modern technologies for healthcare providers.">
+    <meta property="twitter:image" content="https://moeed.dev/projects/pulse-hms-og.jpg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="project-styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navigation" class="navigation" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-content">
+                <a href="../index.html" class="nav-logo" data-testid="link-home-logo" aria-label="Go to home">
+                    Moeed
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-desktop" role="menubar">
+                    <a href="../index.html#work" class="nav-link" data-testid="link-nav-work" role="menuitem">Work</a>
+                    <a href="../index.html#about" class="nav-link" data-testid="link-nav-about" role="menuitem">About</a>
+                    <a href="../index.html#contact" class="nav-link" data-testid="link-nav-contact" role="menuitem">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="nav-mobile-btn" data-testid="button-mobile-menu" id="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <svg class="menu-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg class="close-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="nav-mobile" id="mobile-menu" role="menu" aria-hidden="true">
+                <div class="nav-mobile-content">
+                    <a href="../index.html#work" class="nav-mobile-link" data-testid="link-mobile-work" role="menuitem">Work</a>
+                    <a href="../index.html#about" class="nav-mobile-link" data-testid="link-mobile-about" role="menuitem">About</a>
+                    <a href="../index.html#contact" class="nav-mobile-link" data-testid="link-mobile-contact" role="menuitem">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <header class="project-header">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="../index.html#work" class="breadcrumb-link">← Back to Work</a>
+            </nav>
+            
+            <div class="project-hero">
+                <div class="project-hero-content">
+                    <h1 class="project-title">Pulse HMS</h1>
+                    <p class="project-subtitle">Health Management SaaS Platform</p>
+                    <div class="project-meta">
+                        <div class="project-meta-item">
+                            <span class="meta-label">Role:</span>
+                            <span class="meta-value">Python Backend Developer, Lead Architect</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <span class="meta-label">Duration:</span>
+                            <span class="meta-value">8 months</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <span class="meta-label">Team:</span>
+                            <span class="meta-value">4 developers, 2 designers</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-hero-image">
+                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800" alt="Pulse HMS Dashboard Interface" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Content -->
+    <main class="project-content">
+        <div class="container">
+            <!-- Overview Section -->
+            <section class="project-section">
+                <h2 class="section-title">Project Overview</h2>
+                <div class="section-content">
+                    <p class="project-description">
+                        Pulse HMS is a comprehensive Health Management System designed to streamline healthcare operations for clinics, hospitals, and medical practices. The platform provides a complete solution for patient management, appointment scheduling, electronic health records, billing, and analytics.
+                    </p>
+                    
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <h3>Patient Management</h3>
+                            <p>Complete patient lifecycle management from registration to discharge</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h3>Appointment Scheduling</h3>
+                            <p>Intelligent scheduling system with automated reminders</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h3>Electronic Health Records</h3>
+                            <p>Secure, HIPAA-compliant digital health records</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h3>Billing & Insurance</h3>
+                            <p>Integrated billing system with insurance claim processing</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Challenge Section -->
+            <section class="project-section">
+                <h2 class="section-title">The Challenge</h2>
+                <div class="section-content">
+                    <p>
+                        The healthcare industry faces significant challenges with legacy systems that are often fragmented, difficult to use, and lack modern features. The client needed a solution that could:
+                    </p>
+                    <ul class="challenge-list">
+                        <li>Integrate multiple healthcare workflows into a single platform</li>
+                        <li>Ensure HIPAA compliance and data security</li>
+                        <li>Provide an intuitive user experience for healthcare professionals</li>
+                        <li>Scale to handle thousands of patients and appointments</li>
+                        <li>Support real-time collaboration between healthcare teams</li>
+                        <li>Generate comprehensive reports and analytics</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Solution Section -->
+            <section class="project-section">
+                <h2 class="section-title">The Solution</h2>
+                <div class="section-content">
+                    <p>
+                        I designed and developed a modern, cloud-based SaaS platform using cutting-edge technologies and best practices for healthcare applications.
+                    </p>
+                    
+                    <div class="solution-grid">
+                        <div class="solution-item">
+                            <h3>Architecture & Technology</h3>
+                            <ul>
+                                <li><strong>Frontend:</strong> React.js with TypeScript, Material-UI</li>
+                                <li><strong>Backend:</strong> Node.js with Express, TypeScript</li>
+                                <li><strong>Database:</strong> PostgreSQL with Redis for caching</li>
+                                <li><strong>Cloud:</strong> AWS with Docker containers</li>
+                                <li><strong>Security:</strong> JWT authentication, encryption at rest</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="solution-item">
+                            <h3>Key Features</h3>
+                            <ul>
+                                <li>Real-time appointment scheduling</li>
+                                <li>Electronic health records (EHR)</li>
+                                <li>Patient portal and mobile app</li>
+                                <li>Automated billing and insurance</li>
+                                <li>Advanced analytics and reporting</li>
+                                <li>Multi-location support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Process Section -->
+            <section class="project-section">
+                <h2 class="section-title">Development Process</h2>
+                <div class="section-content">
+                    <div class="process-timeline">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Discovery & Research</h3>
+                                <p>Conducted extensive research on healthcare workflows, HIPAA requirements, and existing solutions. Interviewed healthcare professionals to understand pain points.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Architecture Design</h3>
+                                <p>Designed a scalable microservices architecture with clear separation of concerns. Planned database schema for complex healthcare data relationships.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Development & Testing</h3>
+                                <p>Implemented features iteratively with comprehensive testing. Used TDD approach for critical healthcare functionality.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Security & Compliance</h3>
+                                <p>Implemented HIPAA-compliant security measures, data encryption, and audit trails. Conducted security audits and penetration testing.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>Deployment & Launch</h3>
+                                <p>Deployed to production with zero-downtime deployment strategy. Provided training and documentation for healthcare staff.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Details -->
+            <section class="project-section">
+                <h2 class="section-title">Technical Implementation</h2>
+                <div class="section-content">
+                    <div class="tech-grid">
+                        <div class="tech-category">
+                            <h3>Frontend Architecture</h3>
+                            <ul>
+                                <li>React 18 with TypeScript for type safety</li>
+                                <li>Material-UI for consistent design system</li>
+                                <li>React Query for server state management</li>
+                                <li>React Router for navigation</li>
+                                <li>Formik + Yup for form validation</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tech-category">
+                            <h3>Backend Architecture</h3>
+                            <ul>
+                                <li>Node.js with Express.js framework</li>
+                                <li>TypeScript for type safety</li>
+                                <li>PostgreSQL with TypeORM</li>
+                                <li>Redis for caching and sessions</li>
+                                <li>JWT for authentication</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tech-category">
+                            <h3>DevOps & Infrastructure</h3>
+                            <ul>
+                                <li>AWS EC2 for hosting</li>
+                                <li>Docker for containerization</li>
+                                <li>GitHub Actions for CI/CD</li>
+                                <li>Nginx as reverse proxy</li>
+                                <li>SSL/TLS encryption</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="project-section">
+                <h2 class="section-title">Results & Impact</h2>
+                <div class="section-content">
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <h3>Efficiency Gains</h3>
+                            <p>Reduced appointment scheduling time by 60% and administrative tasks by 40%</p>
+                        </div>
+                        
+                        <div class="result-item">
+                            <h3>User Adoption</h3>
+                            <p>Successfully deployed to 15+ healthcare facilities with 500+ active users</p>
+                        </div>
+                        
+                        <div class="result-item">
+                            <h3>Performance</h3>
+                            <p>Achieved 99.9% uptime with sub-2-second page load times</p>
+                        </div>
+                        
+                        <div class="result-item">
+                            <h3>Security</h3>
+                            <p>Passed HIPAA compliance audits and security assessments</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lessons Learned -->
+            <section class="project-section">
+                <h2 class="section-title">Lessons Learned</h2>
+                <div class="section-content">
+                    <div class="lessons-grid">
+                        <div class="lesson-item">
+                            <h3>Healthcare Compliance</h3>
+                            <p>HIPAA compliance requires careful planning from the start. Security and privacy must be built into the architecture, not added later.</p>
+                        </div>
+                        
+                        <div class="lesson-item">
+                            <h3>User Experience</h3>
+                            <p>Healthcare professionals have limited time, so the interface must be intuitive and efficient. Extensive user testing with actual healthcare workers was crucial.</p>
+                        </div>
+                        
+                        <div class="lesson-item">
+                            <h3>Data Architecture</h3>
+                            <p>Healthcare data is complex and interconnected. A well-designed database schema is essential for performance and maintainability.</p>
+                        </div>
+                        
+                        <div class="lesson-item">
+                            <h3>Scalability</h3>
+                            <p>Healthcare systems need to handle varying loads. Microservices architecture allowed for better scaling and maintenance.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Moeed. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="../index.html#work" class="footer-link">Work</a>
+                    <a href="../index.html#about" class="footer-link">About</a>
+                    <a href="../index.html#contact" class="footer-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="project-script.js"></script>
+</body>
+</html>

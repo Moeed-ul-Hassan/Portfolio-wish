@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Mirror - Repository Automation at Scale | Moeed - Backend Developer</title>
+    <meta name="description" content="Case study of GitHub Mirror - A scalable repository automation platform that handles thousands of repositories with automated backup, synchronization, and management capabilities.">
+    <meta name="keywords" content="GitHub Mirror, Repository Automation, Python, Backend Development, DevOps, Case Study">
+    <meta name="author" content="Moeed">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://moeed.dev/projects/github-mirror">
+    <meta property="og:title" content="GitHub Mirror - Repository Automation at Scale">
+    <meta property="og:description" content="Case study of GitHub Mirror - A scalable repository automation platform that handles thousands of repositories with automated backup, synchronization, and management capabilities.">
+    <meta property="og:image" content="https://moeed.dev/projects/github-mirror-og.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://moeed.dev/projects/github-mirror">
+    <meta property="twitter:title" content="GitHub Mirror - Repository Automation at Scale">
+    <meta property="twitter:description" content="Case study of GitHub Mirror - A scalable repository automation platform that handles thousands of repositories with automated backup, synchronization, and management capabilities.">
+    <meta property="twitter:image" content="https://moeed.dev/projects/github-mirror-og.jpg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="project-styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navigation" class="navigation" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-content">
+                <a href="../index.html" class="nav-logo" data-testid="link-home-logo" aria-label="Go to home">
+                    Moeed
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-desktop" role="menubar">
+                    <a href="../index.html#work" class="nav-link" data-testid="link-nav-work" role="menuitem">Work</a>
+                    <a href="../index.html#about" class="nav-link" data-testid="link-nav-about" role="menuitem">About</a>
+                    <a href="../index.html#contact" class="nav-link" data-testid="link-nav-contact" role="menuitem">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="nav-mobile-btn" data-testid="button-mobile-menu" id="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <svg class="menu-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg class="close-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="nav-mobile" id="mobile-menu" role="menu" aria-hidden="true">
+                <div class="nav-mobile-content">
+                    <a href="../index.html#work" class="nav-mobile-link" data-testid="link-mobile-work" role="menuitem">Work</a>
+                    <a href="../index.html#about" class="nav-mobile-link" data-testid="link-mobile-about" role="menuitem">About</a>
+                    <a href="../index.html#contact" class="nav-mobile-link" data-testid="link-mobile-contact" role="menuitem">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <header class="project-header">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="../index.html#work" class="breadcrumb-link">← Back to Work</a>
+            </nav>
+            
+            <div class="project-hero">
+                <div class="project-hero-content">
+                    <h1 class="project-title">GitHub Mirror</h1>
+                    <p class="project-subtitle">Repository Automation at Scale</p>
+                    <div class="project-meta">
+                        <div class="project-meta-item">
+                            <span class="meta-label">Role:</span>
+                            <span class="meta-value">Backend Developer, DevOps Engineer</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <span class="meta-label">Duration:</span>
+                            <span class="meta-value">4 months</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <span class="meta-label">Team:</span>
+                            <span class="meta-value">2 developers, 1 DevOps engineer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-hero-image">
+                    <img src="https://images.unsplash.com/photo-1618401479427-c8ef9465fbe1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800" alt="GitHub Mirror Dashboard" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Content -->
+    <main class="project-content">
+        <div class="container">
+            <!-- Project Overview -->
+            <section class="project-section">
+                <h2 class="section-title">Project Overview</h2>
+                <p class="section-description">
+                    GitHub Mirror is a high-performance repository automation platform designed to handle thousands of repositories with automated backup, synchronization, and management capabilities. The system provides enterprise-grade repository mirroring, automated backups, and intelligent synchronization across multiple Git hosting platforms.
+                </p>
+                
+                <div class="project-highlights">
+                    <div class="highlight-item">
+                        <h3>Scalable Architecture</h3>
+                        <p>Handles thousands of repositories with efficient resource management and parallel processing capabilities.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h3>Automated Synchronization</h3>
+                        <p>Intelligent sync mechanisms that detect changes and automatically mirror repositories across platforms.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h3>Enterprise Security</h3>
+                        <p>Advanced security features including encrypted backups, access controls, and audit logging.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- The Challenge -->
+            <section class="project-section">
+                <h2 class="section-title">The Challenge</h2>
+                <p class="section-description">
+                    Large organizations with thousands of repositories face significant challenges in maintaining consistent backups, synchronizing across multiple platforms, and managing repository access at scale.
+                </p>
+                
+                <ul class="challenge-list">
+                    <li>Manual repository management processes that don't scale with thousands of repositories</li>
+                    <li>Lack of automated backup and disaster recovery mechanisms</li>
+                    <li>Complex synchronization requirements across multiple Git hosting platforms</li>
+                    <li>Need for enterprise-grade security and access controls</li>
+                    <li>Performance bottlenecks when handling large repositories and frequent updates</li>
+                </ul>
+            </section>
+
+            <!-- The Solution -->
+            <section class="project-section">
+                <h2 class="section-title">The Solution</h2>
+                <p class="section-description">
+                    I designed and built a scalable repository automation platform using Python and modern DevOps practices.
+                </p>
+                
+                <div class="solution-grid">
+                    <div class="solution-item">
+                        <h3>Microservices Architecture</h3>
+                        <p>Built with Python FastAPI, the system uses a microservices approach with separate services for repository management, synchronization, backup, and monitoring.</p>
+                    </div>
+                    <div class="solution-item">
+                        <h3>Intelligent Sync Engine</h3>
+                        <p>Developed a smart synchronization engine that detects changes using webhooks and Git hooks, with conflict resolution and merge strategies.</p>
+                    </div>
+                    <div class="solution-item">
+                        <h3>Automated Backup System</h3>
+                        <p>Implemented automated backup mechanisms with incremental backups, compression, and distributed storage across multiple cloud providers.</p>
+                    </div>
+                    <div class="solution-item">
+                        <h3>Performance Optimization</h3>
+                        <p>Optimized for high performance with connection pooling, caching strategies, and parallel processing for large-scale operations.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Development Process -->
+            <section class="project-section">
+                <h2 class="section-title">Development Process</h2>
+                <div class="process-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-number">1</div>
+                        <div class="timeline-content">
+                            <h3>Architecture Design</h3>
+                            <p>Designed scalable microservices architecture with clear separation of concerns and API-first approach.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">2</div>
+                        <div class="timeline-content">
+                            <h3>Core Development</h3>
+                            <p>Built core services using Python FastAPI, PostgreSQL, and Redis for high-performance repository operations.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">3</div>
+                        <div class="timeline-content">
+                            <h3>Integration & Testing</h3>
+                            <p>Integrated with GitHub, GitLab, and Bitbucket APIs, and implemented comprehensive testing strategies.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">4</div>
+                        <div class="timeline-content">
+                            <h3>Performance Optimization</h3>
+                            <p>Optimized for scale with connection pooling, caching, and parallel processing for handling thousands of repositories.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">5</div>
+                        <div class="timeline-content">
+                            <h3>Deployment & Monitoring</h3>
+                            <p>Deployed using Kubernetes with comprehensive monitoring, logging, and alerting systems.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Implementation -->
+            <section class="project-section">
+                <h2 class="section-title">Technical Implementation</h2>
+                
+                <div class="tech-grid">
+                    <div class="tech-category">
+                        <h3>Backend Development</h3>
+                        <ul>
+                            <li>Python 3.9+ with FastAPI framework</li>
+                            <li>PostgreSQL for primary data storage</li>
+                            <li>Redis for caching and session management</li>
+                            <li>Celery for background task processing</li>
+                            <li>Docker and Kubernetes for deployment</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category">
+                        <h3>DevOps & Infrastructure</h3>
+                        <ul>
+                            <li>Kubernetes for container orchestration</li>
+                            <li>Helm for Kubernetes package management</li>
+                            <li>Prometheus and Grafana for monitoring</li>
+                            <li>ELK Stack for logging and analytics</li>
+                            <li>GitHub Actions for CI/CD</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category">
+                        <h3>Integration & APIs</h3>
+                        <ul>
+                            <li>GitHub REST API and GraphQL</li>
+                            <li>GitLab API integration</li>
+                            <li>Bitbucket API integration</li>
+                            <li>Webhook handling and processing</li>
+                            <li>OAuth2 authentication flows</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results & Impact -->
+            <section class="project-section">
+                <h2 class="section-title">Results & Impact</h2>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <h3>Scalability Achieved</h3>
+                        <p>Successfully handles 10,000+ repositories with sub-second response times and 99.9% uptime.</p>
+                    </div>
+                    <div class="result-item">
+                        <h3>Automation Efficiency</h3>
+                        <p>Reduced manual repository management time by 95% and eliminated human errors in synchronization processes.</p>
+                    </div>
+                    <div class="result-item">
+                        <h3>Cost Savings</h3>
+                        <p>Reduced infrastructure costs by 40% through efficient resource utilization and automated scaling.</p>
+                    </div>
+                    <div class="result-item">
+                        <h3>Security Enhancement</h3>
+                        <p>Implemented enterprise-grade security with encrypted backups, access controls, and comprehensive audit logging.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lessons Learned -->
+            <section class="project-section">
+                <h2 class="section-title">Lessons Learned</h2>
+                <div class="lessons-grid">
+                    <div class="lesson-item">
+                        <h3>Scalability Design</h3>
+                        <p>Designing for scale from the beginning is crucial. Microservices architecture and proper separation of concerns enabled smooth scaling.</p>
+                    </div>
+                    <div class="lesson-item">
+                        <h3>API Rate Limiting</h3>
+                        <p>Handling API rate limits from multiple Git platforms required sophisticated queuing and retry mechanisms.</p>
+                    </div>
+                    <div class="lesson-item">
+                        <h3>Data Consistency</h3>
+                        <p>Maintaining data consistency across multiple platforms and handling conflicts required careful design of synchronization strategies.</p>
+                    </div>
+                    <div class="lesson-item">
+                        <h3>Monitoring & Observability</h3>
+                        <p>Comprehensive monitoring and logging were essential for debugging issues and maintaining system reliability at scale.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Moeed. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://linkedin.com/in/moeed" class="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/moeed" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="mailto:moeed@example.com" class="footer-link">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="project-script.js"></script>
+</body>
+</html>

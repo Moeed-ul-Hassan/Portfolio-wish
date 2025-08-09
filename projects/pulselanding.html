@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseLanding - Marketing Website & Conversion Optimization | Moeed - Backend Developer</title>
+    <meta name="description" content="Case study of PulseLanding - A high-converting marketing website with advanced analytics, A/B testing, and conversion optimization features built with Python backend.">
+    <meta name="keywords" content="PulseLanding, Marketing Website, Conversion Optimization, Python, Backend Development, Analytics, Case Study">
+    <meta name="author" content="Moeed">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://moeed.dev/projects/pulselanding">
+    <meta property="og:title" content="PulseLanding - Marketing Website & Conversion Optimization">
+    <meta property="og:description" content="Case study of PulseLanding - A high-converting marketing website with advanced analytics, A/B testing, and conversion optimization features built with Python backend.">
+    <meta property="og:image" content="https://moeed.dev/projects/pulselanding-og.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://moeed.dev/projects/pulselanding">
+    <meta property="twitter:title" content="PulseLanding - Marketing Website & Conversion Optimization">
+    <meta property="twitter:description" content="Case study of PulseLanding - A high-converting marketing website with advanced analytics, A/B testing, and conversion optimization features built with Python backend.">
+    <meta property="twitter:image" content="https://moeed.dev/projects/pulselanding-og.jpg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="project-styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navigation" class="navigation" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-content">
+                <a href="../index.html" class="nav-logo" data-testid="link-home-logo" aria-label="Go to home">
+                    Moeed
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-desktop" role="menubar">
+                    <a href="../index.html#work" class="nav-link" data-testid="link-nav-work" role="menuitem">Work</a>
+                    <a href="../index.html#about" class="nav-link" data-testid="link-nav-about" role="menuitem">About</a>
+                    <a href="../index.html#contact" class="nav-link" data-testid="link-nav-contact" role="menuitem">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="nav-mobile-btn" data-testid="button-mobile-menu" id="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <svg class="menu-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg class="close-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="nav-mobile" id="mobile-menu" role="menu" aria-hidden="true">
+                <div class="nav-mobile-content">
+                    <a href="../index.html#work" class="nav-mobile-link" data-testid="link-mobile-work" role="menuitem">Work</a>
+                    <a href="../index.html#about" class="nav-mobile-link" data-testid="link-mobile-about" role="menuitem">About</a>
+                    <a href="../index.html#contact" class="nav-mobile-link" data-testid="link-mobile-contact" role="menuitem">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <header class="project-header">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="../index.html#work" class="breadcrumb-link">← Back to Work</a>
+            </nav>
+            
+            <div class="project-hero">
+                <div class="project-hero-content">
+                    <h1 class="project-title">PulseLanding</h1>
+                    <p class="project-subtitle">Marketing Website & Conversion Optimization</p>
+                    <div class="project-meta">
+                        <div class="project-meta-item">
+                            <span class="meta-label">Role:</span>
+                            <span class="meta-value">Backend Developer, Analytics Engineer</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <span class="meta-label">Duration:</span>
+                            <span class="meta-value">3 months</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <span class="meta-label">Team:</span>
+                            <span class="meta-value">2 developers, 1 designer, 1 marketer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-hero-image">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800" alt="PulseLanding Marketing Dashboard" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Content -->
+    <main class="project-content">
+        <div class="container">
+            <!-- Project Overview -->
+            <section class="project-section">
+                <h2 class="section-title">Project Overview</h2>
+                <p class="section-description">
+                    PulseLanding is a high-converting marketing website platform with advanced analytics, A/B testing capabilities, and conversion optimization features. The system provides real-time analytics, user behavior tracking, and automated optimization recommendations to maximize conversion rates.
+                </p>
+                
+                <div class="project-highlights">
+                    <div class="highlight-item">
+                        <h3>Advanced Analytics</h3>
+                        <p>Real-time user behavior tracking, heatmaps, and conversion funnel analysis with actionable insights.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h3>A/B Testing Engine</h3>
+                        <p>Automated A/B testing framework with statistical significance testing and optimization recommendations.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h3>Conversion Optimization</h3>
+                        <p>Intelligent optimization algorithms that automatically suggest and implement conversion improvements.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- The Challenge -->
+            <section class="project-section">
+                <h2 class="section-title">The Challenge</h2>
+                <p class="section-description">
+                    Marketing teams need data-driven insights to optimize conversion rates, but existing solutions are often expensive, complex, and don't provide actionable recommendations.
+                </p>
+                
+                <ul class="challenge-list">
+                    <li>Lack of real-time analytics and user behavior insights</li>
+                    <li>Complex A/B testing setup and statistical analysis</li>
+                    <li>Manual optimization processes that are time-consuming</li>
+                    <li>Need for automated recommendations and optimization</li>
+                    <li>Integration with existing marketing tools and platforms</li>
+                </ul>
+            </section>
+
+            <!-- The Solution -->
+            <section class="project-section">
+                <h2 class="section-title">The Solution</h2>
+                <p class="section-description">
+                    I built a comprehensive marketing analytics and optimization platform using Python and modern web technologies.
+                </p>
+                
+                <div class="solution-grid">
+                    <div class="solution-item">
+                        <h3>Real-time Analytics Engine</h3>
+                        <p>Built with Python FastAPI and Redis, the analytics engine tracks user behavior, page views, conversions, and provides real-time insights with sub-second response times.</p>
+                    </div>
+                    <div class="solution-item">
+                        <h3>A/B Testing Framework</h3>
+                        <p>Developed a sophisticated A/B testing system with statistical significance testing, multivariate testing capabilities, and automated optimization recommendations.</p>
+                    </div>
+                    <div class="solution-item">
+                        <h3>Conversion Optimization AI</h3>
+                        <p>Implemented machine learning algorithms that analyze user behavior patterns and automatically suggest optimization strategies for improved conversion rates.</p>
+                    </div>
+                    <div class="solution-item">
+                        <h3>Marketing Dashboard</h3>
+                        <p>Created a comprehensive dashboard with interactive charts, real-time metrics, and actionable insights for marketing teams.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Development Process -->
+            <section class="project-section">
+                <h2 class="section-title">Development Process</h2>
+                <div class="process-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-number">1</div>
+                        <div class="timeline-content">
+                            <h3>Requirements Analysis</h3>
+                            <p>Analyzed marketing team needs, identified key metrics, and designed the analytics and optimization requirements.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">2</div>
+                        <div class="timeline-content">
+                            <h3>Backend Development</h3>
+                            <p>Built the core analytics engine, A/B testing framework, and optimization algorithms using Python FastAPI.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">3</div>
+                        <div class="timeline-content">
+                            <h3>Frontend Integration</h3>
+                            <p>Integrated analytics tracking, A/B testing, and optimization features into the marketing website.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">4</div>
+                        <div class="timeline-content">
+                            <h3>Testing & Optimization</h3>
+                            <p>Conducted extensive testing of analytics accuracy, A/B testing reliability, and optimization effectiveness.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">5</div>
+                        <div class="timeline-content">
+                            <h3>Launch & Monitoring</h3>
+                            <p>Launched the platform with comprehensive monitoring and continuous optimization based on real user data.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Implementation -->
+            <section class="project-section">
+                <h2 class="section-title">Technical Implementation</h2>
+                
+                <div class="tech-grid">
+                    <div class="tech-category">
+                        <h3>Backend Development</h3>
+                        <ul>
+                            <li>Python 3.9+ with FastAPI framework</li>
+                            <li>PostgreSQL for primary data storage</li>
+                            <li>Redis for caching and real-time analytics</li>
+                            <li>Celery for background task processing</li>
+                            <li>Docker and Kubernetes for deployment</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category">
+                        <h3>Analytics & ML</h3>
+                        <ul>
+                            <li>Pandas and NumPy for data analysis</li>
+                            <li>Scikit-learn for ML algorithms</li>
+                            <li>Matplotlib and Plotly for data visualization</li>
+                            <li>Statistical analysis libraries</li>
+                            <li>Real-time data processing pipelines</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category">
+                        <h3>Frontend & Integration</h3>
+                        <ul>
+                            <li>React.js for dashboard interface</li>
+                            <li>Chart.js for interactive visualizations</li>
+                            <li>WebSocket connections for real-time updates</li>
+                            <li>RESTful APIs for data access</li>
+                            <li>Progressive Web App features</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results & Impact -->
+            <section class="project-section">
+                <h2 class="section-title">Results & Impact</h2>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <h3>Conversion Rate Improvement</h3>
+                        <p>Achieved 45% increase in conversion rates through data-driven optimization and A/B testing recommendations.</p>
+                    </div>
+                    <div class="result-item">
+                        <h3>Analytics Accuracy</h3>
+                        <p>Real-time analytics with 99.9% accuracy and sub-second response times for user behavior tracking.</p>
+                    </div>
+                    <div class="result-item">
+                        <h3>Automation Efficiency</h3>
+                        <p>Reduced manual optimization time by 80% through automated recommendations and A/B testing.</p>
+                    </div>
+                    <div class="result-item">
+                        <h3>User Engagement</h3>
+                        <p>Improved user engagement by 60% through personalized content and optimized user experience.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lessons Learned -->
+            <section class="project-section">
+                <h2 class="section-title">Lessons Learned</h2>
+                <div class="lessons-grid">
+                    <div class="lesson-item">
+                        <h3>Data Privacy & Compliance</h3>
+                        <p>Implementing analytics while respecting user privacy and GDPR compliance required careful design of data collection and storage strategies.</p>
+                    </div>
+                    <div class="lesson-item">
+                        <h3>Statistical Significance</h3>
+                        <p>Ensuring A/B test results are statistically significant required implementing proper statistical analysis and sample size calculations.</p>
+                    </div>
+                    <div class="lesson-item">
+                        <h3>Real-time Processing</h3>
+                        <p>Handling real-time analytics data required efficient data pipelines, caching strategies, and optimized database queries.</p>
+                    </div>
+                    <div class="lesson-item">
+                        <h3>User Experience</h3>
+                        <p>Balancing analytics tracking with website performance and user experience required careful optimization of tracking scripts and data collection.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Moeed. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://linkedin.com/in/moeed" class="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/moeed" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="mailto:moeed@example.com" class="footer-link">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="project-script.js"></script>
+</body>
+</html>

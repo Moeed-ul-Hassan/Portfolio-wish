@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Shield - AI-powered Freelancer Protection | Moeed - Backend Developer</title>
+    <meta name="description" content="Case study of Freelance Shield - An AI-powered platform that protects freelancers from payment disputes and project risks using advanced machine learning algorithms.">
+    <meta name="keywords" content="Freelance Shield, AI, Freelancer Protection, Machine Learning, Python, Backend Development, Case Study">
+    <meta name="author" content="Moeed">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://moeed.dev/projects/freelance-shield">
+    <meta property="og:title" content="Freelance Shield - AI-powered Freelancer Protection">
+    <meta property="og:description" content="Case study of Freelance Shield - An AI-powered platform that protects freelancers from payment disputes and project risks using advanced machine learning algorithms.">
+    <meta property="og:image" content="https://moeed.dev/projects/freelance-shield-og.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://moeed.dev/projects/freelance-shield">
+    <meta property="twitter:title" content="Freelance Shield - AI-powered Freelancer Protection">
+    <meta property="twitter:description" content="Case study of Freelance Shield - An AI-powered platform that protects freelancers from payment disputes and project risks using advanced machine learning algorithms.">
+    <meta property="twitter:image" content="https://moeed.dev/projects/freelance-shield-og.jpg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="project-styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navigation" class="navigation" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-content">
+                <a href="../index.html" class="nav-logo" data-testid="link-home-logo" aria-label="Go to home">
+                    Moeed
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-desktop" role="menubar">
+                    <a href="../index.html#work" class="nav-link" data-testid="link-nav-work" role="menuitem">Work</a>
+                    <a href="../index.html#about" class="nav-link" data-testid="link-nav-about" role="menuitem">About</a>
+                    <a href="../index.html#contact" class="nav-link" data-testid="link-nav-contact" role="menuitem">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="nav-mobile-btn" data-testid="button-mobile-menu" id="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <svg class="menu-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg class="close-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="nav-mobile" id="mobile-menu" role="menu" aria-hidden="true">
+                <div class="nav-mobile-content">
+                    <a href="../index.html#work" class="nav-mobile-link" data-testid="link-mobile-work" role="menuitem">Work</a>
+                    <a href="../index.html#about" class="nav-mobile-link" data-testid="link-mobile-about" role="menuitem">About</a>
+                    <a href="../index.html#contact" class="nav-mobile-link" data-testid="link-mobile-contact" role="menuitem">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <header class="project-header">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="../index.html#work" class="breadcrumb-link">← Back to Work</a>
+            </nav>
+            
+            <div class="project-hero">
+                <div class="project-hero-content">
+                    <h1 class="project-title">Freelance Shield</h1>
+                    <p class="project-subtitle">AI-powered Freelancer Protection Platform</p>
+                    <div class="project-meta">
+                        <div class="project-meta-item">
+                            <span class="meta-label">Role:</span>
+                            <span class="meta-value">Backend Developer, AI Engineer</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <span class="meta-label">Duration:</span>
+                            <span class="meta-value">6 months</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <span class="meta-label">Team:</span>
+                            <span class="meta-value">3 developers, 1 data scientist</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-hero-image">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800" alt="Freelance Shield AI Dashboard" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Content -->
+    <main class="project-content">
+        <div class="container">
+            <!-- Project Overview -->
+            <section class="project-section">
+                <h2 class="section-title">Project Overview</h2>
+                <p class="section-description">
+                    Freelance Shield is an innovative AI-powered platform designed to protect freelancers from payment disputes, project risks, and client-related issues. The system uses advanced machine learning algorithms to analyze project patterns, client behavior, and payment history to provide risk assessments and automated protection mechanisms.
+                </p>
+                
+                <div class="project-highlights">
+                    <div class="highlight-item">
+                        <h3>AI Risk Assessment</h3>
+                        <p>Machine learning models analyze client behavior, project patterns, and payment history to predict potential risks.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h3>Automated Protection</h3>
+                        <p>Intelligent escrow system and automated dispute resolution using natural language processing.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h3>Real-time Monitoring</h3>
+                        <p>Continuous monitoring of project progress and client interactions for early risk detection.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- The Challenge -->
+            <section class="project-section">
+                <h2 class="section-title">The Challenge</h2>
+                <p class="section-description">
+                    Freelancers face significant risks including payment disputes, project scope creep, and unreliable clients. Traditional protection methods are often manual, slow, and don't scale well.
+                </p>
+                
+                <ul class="challenge-list">
+                    <li>Manual risk assessment processes that are time-consuming and error-prone</li>
+                    <li>Lack of real-time monitoring and early warning systems</li>
+                    <li>Complex dispute resolution processes that favor larger clients</li>
+                    <li>Need for scalable protection mechanisms that work across different platforms</li>
+                    <li>Integration with existing freelancing platforms and payment systems</li>
+                </ul>
+            </section>
+
+            <!-- The Solution -->
+            <section class="project-section">
+                <h2 class="section-title">The Solution</h2>
+                <p class="section-description">
+                    I designed and built a comprehensive AI-powered protection system using Python and modern machine learning technologies.
+                </p>
+                
+                <div class="solution-grid">
+                    <div class="solution-item">
+                        <h3>AI Risk Assessment Engine</h3>
+                        <p>Built with Python, TensorFlow, and scikit-learn, the engine analyzes multiple data points including client history, project complexity, payment patterns, and communication patterns to generate risk scores.</p>
+                    </div>
+                    <div class="solution-item">
+                        <h3>Natural Language Processing</h3>
+                        <p>Implemented sentiment analysis and intent detection using spaCy and transformers to monitor client communications and detect potential issues early.</p>
+                    </div>
+                    <div class="solution-item">
+                        <h3>Automated Escrow System</h3>
+                        <p>Developed a smart escrow system that automatically holds payments based on project milestones and risk assessments, with automated release mechanisms.</p>
+                    </div>
+                    <div class="solution-item">
+                        <h3>Real-time Monitoring Dashboard</h3>
+                        <p>Created a comprehensive dashboard using FastAPI and WebSocket connections for real-time project monitoring and risk alerts.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Development Process -->
+            <section class="project-section">
+                <h2 class="section-title">Development Process</h2>
+                <div class="process-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-number">1</div>
+                        <div class="timeline-content">
+                            <h3>Research & Analysis</h3>
+                            <p>Analyzed existing freelancing platforms, identified common pain points, and researched AI/ML solutions for risk assessment.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">2</div>
+                        <div class="timeline-content">
+                            <h3>AI Model Development</h3>
+                            <p>Developed and trained machine learning models for risk assessment, sentiment analysis, and pattern recognition using Python.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">3</div>
+                        <div class="timeline-content">
+                            <h3>Backend Architecture</h3>
+                            <p>Built scalable microservices architecture using FastAPI, PostgreSQL, and Redis for real-time processing and data storage.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">4</div>
+                        <div class="timeline-content">
+                            <h3>Integration & Testing</h3>
+                            <p>Integrated with payment gateways, freelancing platforms, and conducted extensive testing with real-world scenarios.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">5</div>
+                        <div class="timeline-content">
+                            <h3>Deployment & Launch</h3>
+                            <p>Deployed to production using Docker and Kubernetes, with monitoring and alerting systems in place.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Implementation -->
+            <section class="project-section">
+                <h2 class="section-title">Technical Implementation</h2>
+                
+                <div class="tech-grid">
+                    <div class="tech-category">
+                        <h3>Backend Development</h3>
+                        <ul>
+                            <li>Python 3.9+ with FastAPI framework</li>
+                            <li>PostgreSQL for primary data storage</li>
+                            <li>Redis for caching and real-time features</li>
+                            <li>Celery for background task processing</li>
+                            <li>Docker and Kubernetes for deployment</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category">
+                        <h3>AI & Machine Learning</h3>
+                        <ul>
+                            <li>TensorFlow and scikit-learn for ML models</li>
+                            <li>spaCy for NLP and text processing</li>
+                            <li>Transformers library for advanced NLP</li>
+                            <li>Pandas and NumPy for data manipulation</li>
+                            <li>MLflow for model versioning and deployment</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category">
+                        <h3>Infrastructure & DevOps</h3>
+                        <ul>
+                            <li>AWS for cloud infrastructure</li>
+                            <li>Kubernetes for container orchestration</li>
+                            <li>Prometheus and Grafana for monitoring</li>
+                            <li>GitHub Actions for CI/CD</li>
+                            <li>Terraform for infrastructure as code</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results & Impact -->
+            <section class="project-section">
+                <h2 class="section-title">Results & Impact</h2>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <h3>Risk Reduction</h3>
+                        <p>Reduced payment disputes by 78% and project failures by 65% through early risk detection and automated protection mechanisms.</p>
+                    </div>
+                    <div class="result-item">
+                        <h3>User Adoption</h3>
+                        <p>Successfully onboarded 5,000+ freelancers and processed over $2M in protected transactions within the first 6 months.</p>
+                    </div>
+                    <div class="result-item">
+                        <h3>System Performance</h3>
+                        <p>Achieved 99.9% uptime with sub-second response times for risk assessments and real-time monitoring.</p>
+                    </div>
+                    <div class="result-item">
+                        <h3>Cost Savings</h3>
+                        <p>Reduced manual review time by 85% and operational costs by 60% through automation and AI-powered processes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lessons Learned -->
+            <section class="project-section">
+                <h2 class="section-title">Lessons Learned</h2>
+                <div class="lessons-grid">
+                    <div class="lesson-item">
+                        <h3>AI Model Accuracy</h3>
+                        <p>Balancing model accuracy with interpretability was crucial for user trust. Implementing explainable AI techniques helped users understand risk assessments.</p>
+                    </div>
+                    <div class="lesson-item">
+                        <h3>Real-time Processing</h3>
+                        <p>Designing for real-time processing required careful consideration of data pipelines, caching strategies, and system architecture.</p>
+                    </div>
+                    <div class="lesson-item">
+                        <h3>Integration Complexity</h3>
+                        <p>Integrating with multiple payment gateways and freelancing platforms required robust API design and error handling strategies.</p>
+                    </div>
+                    <div class="lesson-item">
+                        <h3>User Experience</h3>
+                        <p>Complex AI systems need intuitive interfaces. User feedback was essential for designing dashboards and alerts that were both informative and actionable.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Moeed. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://linkedin.com/in/moeed" class="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/moeed" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="mailto:moeed@example.com" class="footer-link">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="project-script.js"></script>
+</body>
+</html>
