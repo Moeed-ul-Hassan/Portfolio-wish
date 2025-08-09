@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(222, 22%, 8%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222, 22%, 8%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222, 22%, 8%);
+  --primary: hsl(242, 85%, 67%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(261, 83%, 63%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(215, 16%, 47%);
+  --accent: hsl(159, 81%, 37%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --ring: hsl(242, 85%, 67%);
+  --chart-1: hsl(242, 85%, 67%);
+  --chart-2: hsl(159, 81%, 37%);
+  --chart-3: hsl(32, 98%, 83%);
+  --chart-4: hsl(47, 92%, 56%);
+  --chart-5: hsl(340, 75%, 51%);
+  
+  /* Custom colors from design */
+  --gradient-start: hsl(242, 85%, 67%);
+  --gradient-end: hsl(261, 83%, 63%);
+  --surface-elevated: hsl(0, 0%, 98%);
+  --text-tertiary: hsl(215, 16%, 65%);
+  
+  /* Typography */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: hsl(222, 22%, 8%);
+  --foreground: hsl(210, 40%, 98%);
+  --card: hsl(222, 22%, 10%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --popover: hsl(222, 22%, 8%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --primary: hsl(242, 85%, 67%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(261, 83%, 63%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(217, 32%, 17%);
+  --muted-foreground: hsl(215, 16%, 57%);
+  --accent: hsl(159, 81%, 37%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 62%, 30%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(217, 32%, 17%);
+  --input: hsl(217, 32%, 17%);
+  --ring: hsl(242, 85%, 67%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out;
+  }
+  
+  .backdrop-blur-glass {
+    backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+  
+  .dark .backdrop-blur-glass {
+    background-color: rgba(17, 25, 40, 0.75);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
