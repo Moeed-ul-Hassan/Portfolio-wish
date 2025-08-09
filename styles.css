@@ -176,12 +176,12 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-xl) 0;
+  padding: var(--space-md) 0;
   position: relative;
 }
 
 .nav-logo {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-family: var(--font-serif);
   font-weight: 500;
   letter-spacing: 0.05em;
@@ -194,8 +194,8 @@ body::before {
 
 .nav-logo:hover {
   opacity: 0.8;
-  transform: translateY(-2px);
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-logo::after {
