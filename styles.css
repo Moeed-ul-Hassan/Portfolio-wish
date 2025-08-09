@@ -474,27 +474,30 @@ body::before {
 
 .metric-value {
   display: block;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 600;
   color: var(--foreground);
-  margin-bottom: var(--space-xs);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 0.25rem;
+  font-family: var(--font-serif);
+  line-height: 1;
 }
 
 .metric-item:hover .metric-value {
-  transform: scale(1.1);
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: var(--foreground);
+  transform: scale(1.05);
 }
 
 .metric-label {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: var(--muted-foreground);
-  font-weight: 500;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
 }
 
 .metric-item:hover .metric-label {
-  color: var(--foreground);
+  opacity: 1;
 }
 
 .hero-status {
