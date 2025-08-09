@@ -11,28 +11,28 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-32 bg-muted">
-      <div className="max-w-5xl mx-auto px-8">
-        <div className="grid lg:grid-cols-2 gap-24 items-start">
-          <div className="space-y-16">
+    <section id="about" className="py-40 bg-muted/40">
+      <div className="max-w-6xl mx-auto px-8">
+        <div className="grid lg:grid-cols-2 gap-32 items-start">
+          <div className="space-y-20">
             {experiences.map((experience, index) => (
-              <div key={experience.title} className="space-y-4 animate-stagger" data-testid={`section-about-${index}`}>
-                <h3 className="text-2xl lg:text-3xl font-serif font-medium" data-testid={`text-about-title-${index}`}>
+              <div key={experience.title} className="space-y-6 animate-stagger opacity-0" style={{ animationFillMode: 'forwards' }} data-testid={`section-about-${index}`}>
+                <h3 className="text-3xl lg:text-4xl font-serif font-medium text-shadow" data-testid={`text-about-title-${index}`}>
                   {experience.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed" data-testid={`text-about-description-${index}`}>
+                <p className="text-lg text-muted-foreground leading-relaxed font-light max-w-xl" data-testid={`text-about-description-${index}`}>
                   {experience.description}
                 </p>
               </div>
             ))}
           </div>
           
-          <div className="space-y-8 animate-slide-up">
-            <div className="space-y-4">
-              <h2 className="text-4xl lg:text-5xl font-serif font-medium" data-testid="text-about-main-title">
+          <div className="space-y-12 animate-slide-up">
+            <div className="space-y-8">
+              <h2 className="text-5xl lg:text-6xl font-serif font-medium italic text-shadow" data-testid="text-about-main-title">
                 Over the years,
               </h2>
-              <div className="space-y-6 text-muted-foreground leading-relaxed">
+              <div className="space-y-8 text-lg text-muted-foreground leading-relaxed font-light">
                 <p data-testid="text-about-experience">
                   I've built products for companies and businesses around the globe ranging from marketing websites to complex solutions and enterprise apps with focus on fast, elegant and accessible user experiences.
                 </p>

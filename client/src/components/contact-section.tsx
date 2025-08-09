@@ -52,37 +52,37 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-32">
-      <div className="max-w-5xl mx-auto px-8">
-        <div className="grid lg:grid-cols-2 gap-24 items-start">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-4xl lg:text-5xl font-serif font-medium" data-testid="text-contact-title">
+    <section id="contact" className="py-40">
+      <div className="max-w-6xl mx-auto px-8">
+        <div className="grid lg:grid-cols-2 gap-32 items-start">
+          <div className="space-y-12">
+            <div className="space-y-8">
+              <h2 className="text-5xl lg:text-6xl font-serif font-medium text-shadow" data-testid="text-contact-title">
                 Send me a message!
               </h2>
-              <p className="text-lg text-muted-foreground" data-testid="text-contact-subtitle">
+              <p className="text-xl text-muted-foreground leading-relaxed font-light max-w-lg" data-testid="text-contact-subtitle">
                 Got a question or proposal, or just want to say hello? Go ahead.
               </p>
             </div>
             
-            <div className="space-y-6 text-sm text-muted-foreground">
+            <div className="space-y-8 text-base text-muted-foreground">
               <div data-testid="contact-email">
-                <p className="font-medium text-foreground mb-1">Email</p>
-                <a href="mailto:moeed@example.com" className="hover:text-foreground transition-colors duration-300">
+                <p className="font-medium text-foreground mb-2 text-sm uppercase tracking-wider">Email</p>
+                <a href="mailto:moeed@example.com" className="hover:text-foreground transition-all duration-500 border-b border-foreground/20 pb-1">
                   moeed@example.com
                 </a>
               </div>
               <div data-testid="contact-location">
-                <p className="font-medium text-foreground mb-1">Location</p>
-                <p>Gujrat, Pakistan</p>
+                <p className="font-medium text-foreground mb-2 text-sm uppercase tracking-wider">Location</p>
+                <p className="font-light">Gujrat, Pakistan</p>
               </div>
               <div data-testid="contact-social">
-                <p className="font-medium text-foreground mb-1">Social</p>
-                <div className="space-y-1">
-                  <a href="https://github.com/moeed" className="block hover:text-foreground transition-colors duration-300">
+                <p className="font-medium text-foreground mb-3 text-sm uppercase tracking-wider">Social</p>
+                <div className="space-y-2">
+                  <a href="https://github.com/moeed" className="block hover:text-foreground transition-all duration-500 border-b border-foreground/20 pb-1 w-fit">
                     GitHub
                   </a>
-                  <a href="https://linkedin.com/in/moeed" className="block hover:text-foreground transition-colors duration-300">
+                  <a href="https://linkedin.com/in/moeed" className="block hover:text-foreground transition-all duration-500 border-b border-foreground/20 pb-1 w-fit">
                     LinkedIn
                   </a>
                 </div>
@@ -90,10 +90,10 @@ export default function ContactSection() {
             </div>
           </div>
           
-          <div className="space-y-6">
-            <form onSubmit={handleSubmit} className="space-y-6" data-testid="form-contact">
-              <div className="space-y-2">
-                <label htmlFor="name" className="block text-sm font-medium">
+          <div className="space-y-8">
+            <form onSubmit={handleSubmit} className="space-y-8" data-testid="form-contact">
+              <div className="space-y-3">
+                <label htmlFor="name" className="block text-sm font-medium uppercase tracking-wider">
                   Your Name
                 </label>
                 <Input
@@ -101,13 +101,13 @@ export default function ContactSection() {
                   type="text"
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  className="border-0 border-b border-border rounded-none px-0 pb-2 focus-visible:ring-0 focus-visible:border-foreground bg-transparent"
+                  className="border-0 border-b-2 border-border rounded-none px-0 pb-4 focus-visible:ring-0 focus-visible:border-foreground bg-transparent text-lg transition-all duration-500"
                   placeholder="Enter your name"
                   data-testid="input-contact-name"
                 />
               </div>
-              <div className="space-y-2">
-                <label htmlFor="email" className="block text-sm font-medium">
+              <div className="space-y-3">
+                <label htmlFor="email" className="block text-sm font-medium uppercase tracking-wider">
                   Email Address
                 </label>
                 <Input
@@ -115,28 +115,28 @@ export default function ContactSection() {
                   type="email"
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  className="border-0 border-b border-border rounded-none px-0 pb-2 focus-visible:ring-0 focus-visible:border-foreground bg-transparent"
+                  className="border-0 border-b-2 border-border rounded-none px-0 pb-4 focus-visible:ring-0 focus-visible:border-foreground bg-transparent text-lg transition-all duration-500"
                   placeholder="Enter your email"
                   data-testid="input-contact-email"
                 />
               </div>
-              <div className="space-y-2">
-                <label htmlFor="message" className="block text-sm font-medium">
+              <div className="space-y-3">
+                <label htmlFor="message" className="block text-sm font-medium uppercase tracking-wider">
                   Your Message
                 </label>
                 <Textarea
                   id="message"
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  rows={4}
-                  className="border-0 border-b border-border rounded-none px-0 pb-2 focus-visible:ring-0 focus-visible:border-foreground resize-none bg-transparent"
+                  rows={5}
+                  className="border-0 border-b-2 border-border rounded-none px-0 pb-4 focus-visible:ring-0 focus-visible:border-foreground resize-none bg-transparent text-lg transition-all duration-500"
                   placeholder="Tell me about your project..."
                   data-testid="textarea-contact-message"
                 />
               </div>
               <Button 
                 type="submit" 
-                className="w-full mt-8 rounded-none h-12"
+                className="w-full mt-12 rounded-none h-14 text-base font-medium hover:opacity-80 transition-all duration-500"
                 disabled={contactMutation.isPending}
                 data-testid="button-send-message"
               >
