@@ -6,12 +6,12 @@ const contactForm = document.getElementById('contact-form');
 const toast = document.getElementById('toast');
 const skipLink = document.getElementById('skip-link');
 
-// Performance optimizations and enhanced interactions for FAANG/MAANG impact
+// Performance optimizations - Reduced complexity
 let lastScrollY = 0;
 let ticking = false;
 let scrollDirection = 'down';
 
-// Enhanced scroll performance with RAF
+// Optimized scroll performance
 function handleScroll() {
     const currentScrollY = window.scrollY;
     scrollDirection = currentScrollY > lastScrollY ? 'down' : 'up';
@@ -26,7 +26,7 @@ function handleScroll() {
     }
 }
 
-// Update navigation with smooth transitions and blur effects
+// Simplified navigation update
 function updateNavigation() {
     const scrolled = lastScrollY > 50;
     const scrolledUp = scrollDirection === 'up' && lastScrollY > 100;
@@ -43,7 +43,7 @@ function updateNavigation() {
     }
 }
 
-// Enhanced intersection observer for better performance
+// Simplified intersection observer
 function setupIntersectionObserver() {
     const observerOptions = {
         threshold: 0.1,
@@ -54,23 +54,15 @@ function setupIntersectionObserver() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate-in');
-                // Add blur effect on scroll
-                if (entry.target.classList.contains('project-item') || 
-                    entry.target.classList.contains('about-item') ||
-                    entry.target.classList.contains('metric-item')) {
-                    entry.target.style.backdropFilter = 'blur(12px)';
-                    entry.target.style.webkitBackdropFilter = 'blur(12px)';
-                }
             }
         });
     }, observerOptions);
 
-    // Observe all elements that need animation
     const animatedElements = document.querySelectorAll('.project-item, .about-item, .metric-item, .contact-item');
     animatedElements.forEach(el => observer.observe(el));
 }
 
-// Enhanced metric animations with blur effects
+// Simplified metric animations
 function animateMetrics() {
     const metrics = document.querySelectorAll('.metric-item');
     metrics.forEach((metric, index) => {
@@ -79,15 +71,12 @@ function animateMetrics() {
         const numericValue = parseInt(finalValue.replace(/[^\d]/g, ''));
         
         if (!isNaN(numericValue)) {
-            // Add blur effect during animation
-            metric.style.backdropFilter = 'blur(16px)';
-            metric.style.webkitBackdropFilter = 'blur(16px)';
-            animateNumber(metricValue, 0, numericValue, 2000, index * 200);
+            animateNumber(metricValue, 0, numericValue, 1500, index * 100);
         }
     });
 }
 
-// Number animation function with enhanced transitions
+// Optimized number animation
 function animateNumber(element, start, end, duration, delay) {
     setTimeout(() => {
         const startTime = performance.now();
@@ -104,13 +93,6 @@ function animateNumber(element, start, end, duration, delay) {
             
             if (progress < 1) {
                 requestAnimationFrame(updateNumber);
-            } else {
-                // Add final blur effect
-                const metricItem = element.closest('.metric-item');
-                if (metricItem) {
-                    metricItem.style.backdropFilter = 'blur(12px)';
-                    metricItem.style.webkitBackdropFilter = 'blur(12px)';
-                }
             }
         }
         
@@ -118,28 +100,22 @@ function animateNumber(element, start, end, duration, delay) {
     }, delay);
 }
 
-// Enhanced project interactions with blur effects
+// Simplified project interactions
 function setupProjectInteractions() {
     const projects = document.querySelectorAll('.project-item');
     
     projects.forEach(project => {
         project.addEventListener('mouseenter', () => {
-            project.style.transform = 'translateY(-8px) scale(1.02)';
-            project.style.backdropFilter = 'blur(16px)';
-            project.style.webkitBackdropFilter = 'blur(16px)';
-            project.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(255, 255, 255, 0.2)';
+            project.style.transform = 'translateY(-4px) translateZ(0)';
         });
         
         project.addEventListener('mouseleave', () => {
-            project.style.transform = 'translateY(0) scale(1)';
-            project.style.backdropFilter = 'blur(12px)';
-            project.style.webkitBackdropFilter = 'blur(12px)';
-            project.style.boxShadow = 'none';
+            project.style.transform = 'translateY(0) translateZ(0)';
         });
     });
 }
 
-// Enhanced mobile menu with blur effects
+// Simplified mobile menu
 function setupMobileMenu() {
     if (!mobileMenuBtn || !mobileMenu) return;
     
@@ -150,16 +126,10 @@ function setupMobileMenu() {
             mobileMenuBtn.classList.remove('active');
             mobileMenu.classList.remove('active');
             document.body.style.overflow = '';
-            // Add blur effect when closing
-            mobileMenu.style.backdropFilter = 'blur(0px)';
-            mobileMenu.style.webkitBackdropFilter = 'blur(0px)';
         } else {
             mobileMenuBtn.classList.add('active');
             mobileMenu.classList.add('active');
             document.body.style.overflow = 'hidden';
-            // Add blur effect when opening
-            mobileMenu.style.backdropFilter = 'blur(24px)';
-            mobileMenu.style.webkitBackdropFilter = 'blur(24px)';
         }
     });
     
