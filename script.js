@@ -495,6 +495,67 @@ function addSmoothTransitions() {
     });
 }
 
+// Scroll-triggered animations
+function initScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const element = entry.target;
+                element.classList.add('animate-in');
+                
+                // Trigger staggered animations for grid items
+                if (element.classList.contains('philosophy-section')) {
+                    const grid = element.querySelector('.philosophy-grid');
+                    if (grid) {
+                        setTimeout(() => grid.classList.add('animate-in'), 200);
+                    }
+                }
+                
+                if (element.classList.contains('career-journey-section')) {
+                    const timeline = element.querySelector('.career-timeline');
+                    if (timeline) {
+                        setTimeout(() => timeline.classList.add('animate-in'), 200);
+                    }
+                }
+                
+                if (element.classList.contains('featured-projects-section')) {
+                    const heroProject = element.querySelector('.hero-project');
+                    const projectsGrid = element.querySelector('.projects-grid');
+                    
+                    if (heroProject) {
+                        setTimeout(() => heroProject.classList.add('animate-in'), 200);
+                    }
+                    
+                    if (projectsGrid) {
+                        setTimeout(() => projectsGrid.classList.add('animate-in'), 400);
+                    }
+                }
+                
+                if (element.classList.contains('about-section')) {
+                    const aboutGrid = element.querySelector('.about-grid');
+                    if (aboutGrid) {
+                        setTimeout(() => aboutGrid.classList.add('animate-in'), 200);
+                    }
+                }
+                
+                // Stop observing after animation
+                observer.unobserve(element);
+            }
+        });
+    }, observerOptions);
+
+    // Observe all elements with animate-on-scroll class
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
+}
+
 // Initialize all enhanced features
 function init() {
     setupIntersectionObserver();
@@ -565,3 +626,6 @@ handleImageLoad();
 
 // Initialize smooth transitions
 addSmoothTransitions();
+
+// Initialize scroll animations
+initScrollAnimations();
