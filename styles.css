@@ -2346,3 +2346,47 @@ textarea:focus {
     font-size: 2rem;
   }
 }
+
+/* Alternating Project Layout */
+.project-item.project-left .project-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.project-item.project-right .project-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.project-item.project-right .project-content {
+  direction: rtl;
+}
+
+.project-item.project-right .project-content > * {
+  direction: ltr;
+}
+
+/* Responsive Design for Alternating Layout */
+@media (max-width: 768px) {
+  .project-item.project-left .project-content,
+  .project-item.project-right .project-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    direction: ltr;
+  }
+  
+  .project-item.project-right .project-content {
+    direction: ltr;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-item.project-left .project-content,
+  .project-item.project-right .project-content {
+    gap: var(--space-md);
+  }
+}
