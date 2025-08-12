@@ -1967,3 +1967,166 @@ textarea:focus {
     font-size: 1.75rem;
   }
 }
+
+/* Hackathon Section */
+.hackathon-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: var(--space-2xl);
+  border-radius: var(--radius);
+  margin: var(--space-3xl) 0;
+  text-align: center;
+}
+
+.hackathon-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hackathon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: rgba(255, 255, 255, 0.2);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius);
+  margin-bottom: var(--space-lg);
+  backdrop-filter: blur(10px);
+}
+
+.hackathon-icon {
+  font-size: 1.5rem;
+}
+
+.hackathon-text {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hackathon-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 var(--space-md) 0;
+}
+
+.hackathon-description {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Career Journey Section */
+.career-journey-section {
+  padding: var(--space-3xl) 0;
+  background: var(--card);
+  border-radius: var(--radius);
+  margin: var(--space-3xl) 0;
+}
+
+.career-journey-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 var(--space-2xl) 0;
+  color: var(--foreground);
+}
+
+.career-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-xl);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.career-phase {
+  text-align: center;
+  padding: var(--space-lg);
+  background: var(--background);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.career-phase:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.phase-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+  display: block;
+}
+
+.phase-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin: 0 0 var(--space-sm) 0;
+}
+
+.phase-description {
+  color: var(--muted-foreground);
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+/* Responsive Design for New Sections */
+@media (max-width: 768px) {
+  .hackathon-section {
+    padding: var(--space-xl);
+    margin: var(--space-2xl) 0;
+  }
+  
+  .hackathon-title {
+    font-size: 1.75rem;
+  }
+  
+  .hackathon-description {
+    font-size: 1rem;
+  }
+  
+  .career-journey-title {
+    font-size: 1.75rem;
+  }
+  
+  .career-timeline {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    padding: 0 var(--space-md);
+  }
+  
+  .career-phase {
+    padding: var(--space-md);
+  }
+  
+  .phase-icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hackathon-section {
+    padding: var(--space-lg);
+  }
+  
+  .hackathon-title {
+    font-size: 1.5rem;
+  }
+  
+  .career-journey-title {
+    font-size: 1.5rem;
+  }
+  
+  .career-timeline {
+    padding: 0 var(--space-sm);
+  }
+}
