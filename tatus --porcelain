@@ -1,0 +1,117 @@
+warning: in the working copy of 'styles.css', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/index.html b/index.html[m
+[1mindex d62756c..d33f6f3 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -4,61 +4,29 @@[m
+     <meta charset="UTF-8">[m
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+     [m
+[31m-    <!-- Primary Meta Tags -->[m
+[31m-    <title>Moeed - Senior Python Backend Engineer | Scalable Systems & AI | 10M+ Users, 99.9% Uptime</title>[m
+[31m-    <meta name="title" content="Moeed - Senior Python Backend Engineer | Scalable Systems & AI | 10M+ Users, 99.9% Uptime">[m
+[31m-    <meta name="description" content="Senior Python Backend Engineer specializing in scalable systems, AI/ML, and high-performance applications. Built systems handling 10M+ users, 99.9% uptime, and 50ms response times. Expert in microservices, distributed systems, and cloud-native development.">[m
+[31m-    <meta name="keywords" content="Senior Python Backend Engineer, Scalable Systems, AI/ML, Microservices, High Performance, System Design, FAANG, MAANG, Backend Development, Python, FastAPI, PostgreSQL, Redis, Docker, Kubernetes, AWS, Cloud Native, Distributed Systems, Machine Learning, Data Engineering">[m
+[31m-    <meta name="author" content="Moeed">[m
+[32m+[m[32m    <!-- Essential Meta Tags -->[m
+[32m+[m[32m    <title>Moeed ul Hassan - Senior Python Developer | Python Backend Engineer</title>[m
+[32m+[m[32m    <meta name="description" content="Moeed ul Hassan is a Senior Python Developer and Python Backend Engineer specializing in scalable systems, AI/ML, and high-performance applications. Built systems handling 10M+ users, 99.9% uptime, and 50ms response times.">[m
+[32m+[m[32m    <meta name="keywords" content="Moeed ul Hassan, Senior Python Developer, Python Backend Engineer, Python Developer Pakistan">[m
+[32m+[m[32m    <meta name="author" content="Moeed ul Hassan">[m
+     <meta name="robots" content="index, follow">[m
+[31m-    <meta name="language" content="English">[m
+[31m-    <meta name="revisit-after" content="7 days">[m
+[31m-    <meta name="distribution" content="global">[m
+[31m-    <meta name="rating" content="general">[m
+     [m
+     <!-- Canonical URL -->[m
+     <link rel="canonical" href="https://moeed.dev/">[m
+     [m
+[31m-    <!-- Open Graph / Facebook -->[m
+[32m+[m[32m    <!-- Essential SEO Meta Tags Only -->[m
+[32m+[m[32m    <meta name="geo.region" content="PK">[m
+[32m+[m[32m    <meta name="geo.placename" content="Gujrat, Pakistan">[m
+[32m+[m[41m    [m
+[32m+[m[32m    <!-- Open Graph - Essential Only -->[m
+[32m+[m[32m    <meta property="og:title" content="Moeed ul Hassan - Senior Python Developer">[m
+[32m+[m[32m    <meta property="og:description" content="Senior Python Developer specializing in scalable systems, AI/ML, and high-performance applications">[m
+     <meta property="og:type" content="website">[m
+     <meta property="og:url" content="https://moeed.dev/">[m
+[31m-    <meta property="og:title" content="Moeed - Senior Python Backend Engineer | Scalable Systems & AI">[m
+[31m-    <meta property="og:description" content="Senior Python Backend Engineer specializing in scalable systems, AI/ML, and high-performance applications. Built systems handling 10M+ users, 99.9% uptime, and 50ms response times.">[m
+[31m-    <meta property="og:image" content="https://moeed.dev/og-image.jpg">[m
+[31m-    <meta property="og:image:width" content="1200">[m
+[31m-    <meta property="og:image:height" content="630">[m
+[31m-    <meta property="og:image:alt" content="Moeed - Senior Python Backend Engineer Portfolio">[m
+[31m-    <meta property="og:site_name" content="Moeed - Senior Python Backend Engineer">[m
+[31m-    <meta property="og:locale" content="en_US">[m
+[31m-[m
+[31m-    <!-- Twitter -->[m
+[31m-    <meta property="twitter:card" content="summary_large_image">[m
+[31m-    <meta property="twitter:url" content="https://moeed.dev/">[m
+[31m-    <meta property="twitter:title" content="Moeed - Senior Python Backend Engineer | Scalable Systems & AI">[m
+[31m-    <meta property="twitter:description" content="Senior Python Backend Engineer specializing in scalable systems, AI/ML, and high-performance applications. Built systems handling 10M+ users, 99.9% uptime, and 50ms response times.">[m
+[31m-    <meta property="twitter:image" content="https://moeed.dev/og-image.jpg">[m
+[31m-    <meta property="twitter:creator" content="@moeed">[m
+[31m-    <meta property="twitter:site" content="@moeed">[m
+[31m-    [m
+[31m-    <!-- Additional Meta Tags -->[m
+[31m-    <meta name="theme-color" content="#000000">[m
+[31m-    <meta name="msapplication-TileColor" content="#000000">[m
+[31m-    <meta name="apple-mobile-web-app-capable" content="yes">[m
+[31m-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">[m
+[31m-    <meta name="apple-mobile-web-app-title" content="Moeed - Senior Python Backend Engineer">[m
+     [m
+[31m-    <!-- Performance and SEO Hints -->[m
+[32m+[m[32m    <!-- Performance Hints -->[m
+     <link rel="preload" href="styles.css" as="style">[m
+     <link rel="preload" href="script.js" as="script">[m
+[31m-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">[m
+[31m-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">[m
+[31m-    <link rel="dns-prefetch" href="https://images.unsplash.com">[m
+[31m-    [m
+[31m-    <!-- Preconnect for Performance -->[m
+[31m-    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[31m-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[31m-    <link rel="preconnect" href="https://images.unsplash.com">[m
+[31m-    <link rel="dns-prefetch" href="https://images.unsplash.com">[m
+     [m
+     <!-- Fonts -->[m
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">[m
+[36m@@ -70,19 +38,20 @@[m
+     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">[m
+     <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">[m
+     [m
+[31m-    <!-- Structured Data -->[m
+[32m+[m[32m    <!-- Structured Data - Essential Only -->[m
+     <script type="application/ld+json">[m
+     {[m
+       "@context": "https://schema.org",[m
+       "@type": "Person",[m
+[31m-      "name": "Moeed",[m
+[31m-      "jobTitle": "Senior Python Backend Engineer",[m
+[31m-      "description": "Senior Python Backend Engineer specializing in scalable systems, AI/ML, and high-performance applications. Built systems handling 10M+ users, 99.9% uptime, and 50ms response times.",[m
+[32m+[m[32m      "name": "Moeed ul Hassan",[m
+[32m+[m[32m      "alternateName": "Moeed",[m
+[32m+[m[32m      "jobTitle": "Senior Python Developer",[m
+[32m+[m[32m      "description": "Moeed ul Hassan is a Senior Python Developer and Python Backend Engineer specializing in scalable systems, AI/ML, and high-performance applications. Built systems handling 10M+ users, 99.9% uptime, and 50ms response times.",[m
+       "url": "https://moeed.dev",[m
+       "image": "https://moeed.dev/og-image.jpg",[m
+       "sameAs": [[m
+         "https://github.com/moeed",[m
+[31m-        "https://linkedin.com/in/moeed"[m
+[32m+[m[32m        "https://pk.linkedin.com/in/moeed-ul-hassan-a92340369"[m
+       ],[m
+       "address": {[m
+         "@type": "PostalAddress",[m
+[36m@@ -90,651 +59,32 @@[m
+         "addressCountry": "Pakistan"[m
+       },[m
+       "knowsAbout": [[m
+[31m-        "Python Backend Development",[m
+[32m+[m[32m        "Python Development",[m
+[32m+[m[32m        "Python Backend Engineering",[m
+         "Scalable Systems",[m
+         "AI/ML",[m
+         "Microservices",[m
+[31m-        "System Des

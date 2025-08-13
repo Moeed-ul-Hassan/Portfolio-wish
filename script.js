@@ -556,6 +556,50 @@ function initScrollAnimations() {
     });
 }
 
+// Enhanced intersection observer for section animations
+function setupSectionAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const element = entry.target;
+                
+                // Add animate-in class to trigger subtle animations
+                element.classList.add('animate-in');
+                
+                // Add subtle entrance effects for staggered elements
+                const staggeredElements = element.querySelectorAll('.animate-stagger');
+                staggeredElements.forEach((el, index) => {
+                    setTimeout(() => {
+                        el.classList.add('animate-in');
+                        // Add subtle entrance animation
+                        el.style.transform = 'translateY(0) scale(1)';
+                        el.style.opacity = '1';
+                    }, index * 100);
+                });
+                
+                // Stop observing after animation
+                sectionObserver.unobserve(element);
+            }
+        });
+    }, observerOptions);
+
+    // Observe all sections with animation classes
+    const animatedSections = document.querySelectorAll('.section-animate, .slide-in-left, .slide-in-right, .scale-in, .rotate-in, .bounce-in, .fade-in-up');
+    animatedSections.forEach(section => {
+        sectionObserver.observe(section);
+    });
+}
+
+// Initialize section animations
+function initSectionAnimations() {
+    setupSectionAnimations();
+}
+
 // Initialize all enhanced features
 function init() {
     setupIntersectionObserver();
@@ -563,6 +607,7 @@ function init() {
     setupFormValidation();
     setupMobileMenu();
     setupSmoothScrolling();
+    initSectionAnimations();
     
     // Animate metrics on page load
     if (document.querySelector('.hero-metrics')) {
