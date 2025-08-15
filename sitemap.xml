@@ -1,80 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    
-    <!-- Home Page -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Main Pages -->
     <url>
         <loc>https://moeed.dev/</loc>
-        <lastmod>2025-01-27</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     
-    <!-- About Page -->
     <url>
-        <loc>https://moeed.dev/about</loc>
-        <lastmod>2025-01-27</lastmod>
+        <loc>https://moeed.dev/about.html</loc>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
-    <!-- Project Pages -->
+    <url>
+        <loc>https://moeed.dev/projects.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Project Detail Pages -->
     <url>
         <loc>https://moeed.dev/projects/pulse-hms.html</loc>
-        <lastmod>2025-01-27</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <url>
-        <loc>https://moeed.dev/projects/medirumor-rumor-ai.html</loc>
-        <lastmod>2025-01-27</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <url>
-        <loc>https://moeed.dev/projects/freelance-shield.html</loc>
-        <lastmod>2025-01-27</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <url>
         <loc>https://moeed.dev/projects/github-mirror.html</loc>
-        <lastmod>2025-01-27</lastmod>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://moeed.dev/projects/medirumor-rumor-ai.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://moeed.dev/projects/freelance-shield.html</loc>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <url>
         <loc>https://moeed.dev/projects/pulselanding.html</loc>
-        <lastmod>2025-01-27</lastmod>
+        <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     
-    <!-- Section Anchors -->
+    <!-- Resume -->
     <url>
-        <loc>https://moeed.dev/#work</loc>
-        <lastmod>2025-01-27</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    
-    <url>
-        <loc>https://moeed.dev/#about</loc>
-        <lastmod>2025-01-27</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    
-    <url>
-        <loc>https://moeed.dev/#contact</loc>
-        <lastmod>2025-01-27</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://moeed.dev/Resume/Moeed_ul_Hassan_Resume.pdf</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
 </urlset>

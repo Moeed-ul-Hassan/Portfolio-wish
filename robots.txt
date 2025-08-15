@@ -4,31 +4,17 @@ Allow: /
 # Sitemap
 Sitemap: https://moeed.dev/sitemap.xml
 
-# Allow all major search engines
-User-agent: Googlebot
-Allow: /
+# Allow crawling of all pages
+Allow: /projects.html
+Allow: /projects/
+Allow: /about.html
+Allow: /Resume/
 
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
+# Disallow admin or private areas (if any)
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /node_modules/
+Disallow: /vendor/
 
 # Crawl delay (optional)
 Crawl-delay: 1
-
-# Disallow admin or private areas (if any exist)
-Disallow: /admin/
-Disallow: /private/
-Disallow: /temp/
-Disallow: /cache/
-
-# Allow important directories
-Allow: /projects/
-Allow: /about.html
-Allow: /index.html
-Allow: /styles.css
-Allow: /script.js
