@@ -1,24 +1,50 @@
 /* CSS Variables */
 :root {
+  /* Pure Black & White Minimalist Palette */
   --background: #ffffff;
   --foreground: #000000;
   --card: #ffffff;
   --card-foreground: #000000;
   --popover: #ffffff;
   --popover-foreground: #000000;
+  
+  /* Primary Colors - Pure Black */
   --primary: #000000;
   --primary-foreground: #ffffff;
+  --primary-light: #333333;
+  --primary-dark: #000000;
+  
+  /* Secondary Colors - Pure Whites & Grays */
   --secondary: #f8f8f8;
   --secondary-foreground: #000000;
-  --muted: #f5f5f5;
-  --muted-foreground: #666666;
-  --accent: #f0f0f0;
+  --secondary-light: #fafafa;
+  --secondary-dark: #f0f0f0;
+  
+  /* Accent Colors - Pure Grays */
+  --accent: #f5f5f5;
   --accent-foreground: #000000;
-  --destructive: #000000;
-  --destructive-foreground: #ffffff;
+  --accent-light: #fafafa;
+  --accent-dark: #e5e5e5;
+  
+  /* Muted Colors - Pure Grays */
+  --muted: #f8f8f8;
+  --muted-foreground: #666666;
+  --muted-light: #fafafa;
+  --muted-dark: #e0e0e0;
+  
+  /* Border Colors - Pure Grays */
   --border: #e0e0e0;
+  --border-light: #f0f0f0;
+  --border-dark: #d0d0d0;
+  
+  /* Input & Ring */
   --input: #ffffff;
   --ring: #000000;
+  
+  /* Success & Warning - Pure B&W */
+  --success: #000000;
+  --warning: #333333;
+  --error: #000000;
   
   /* Typography */
   --font-sans: 'Inter', system-ui, sans-serif;
@@ -35,11 +61,16 @@
   --space-3xl: 6rem;
   --space-4xl: 8rem;
   
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  /* Shadows - Pure B&W */
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  
+  /* Gradients - Pure B&W */
+  --gradient-primary: linear-gradient(135deg, #000000 0%, #333333 100%);
+  --gradient-secondary: linear-gradient(135deg, #f8f8f8 0%, #e0e0e0 100%);
+  --gradient-accent: linear-gradient(135deg, #f5f5f5 0%, #e5e5e5 100%);
 }
 
 .dark {
@@ -88,7 +119,37 @@ html {
   font-size: 16px;
 }
 
-/* Clean background - no pattern */
+/* Unique Minimalist Background Elements */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(0, 0, 0, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0, 0, 0, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(0, 0, 0, 0.01) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Subtle Grid Pattern */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: -1;
+}
 
 /* Utility Classes */
 .font-serif {
@@ -116,22 +177,23 @@ html {
   left: 0;
   right: 0;
   z-index: 50;
-  transition: background 0.3s ease-out, backdrop-filter 0.3s ease-out;
+  transition: all 0.3s ease-out;
   background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-light);
   transform: translateZ(0);
   will-change: background, backdrop-filter;
   height: 64px;
+  box-shadow: var(--shadow-sm);
 }
 
 .navigation.scrolled {
   background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   border-bottom: 1px solid var(--border);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-md);
 }
 
 .navigation.scrolled-up {
