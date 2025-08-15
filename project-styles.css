@@ -30,7 +30,7 @@
 .book-spine {
     width: 60px;
     height: 80px;
-    background: linear-gradient(45deg, #8b4513, #a0522d);
+    background: linear-gradient(45deg, #000000, #333333);
     margin: 0 auto 20px;
     border-radius: 8px;
     position: relative;
@@ -45,8 +45,8 @@
     transform: translateX(-50%);
     width: 40px;
     height: 2px;
-    background: #654321;
-    box-shadow: 0 8px 0 #654321, 0 16px 0 #654321;
+    background: #ffffff;
+    box-shadow: 0 8px 0 #ffffff, 0 16px 0 #ffffff;
 }
 
 @keyframes bookFlip {
@@ -127,10 +127,52 @@
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
     color: white;
     padding: 4rem 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Unique Geometric Elements */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    animation: float 6s ease-in-out infinite;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: 15%;
+    left: 8%;
+    width: 150px;
+    height: 150px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transform: rotate(45deg);
+    pointer-events: none;
+    z-index: 1;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.3;
+    }
+    50% { 
+        transform: translateY(-20px) rotate(180deg);
+        opacity: 0.6;
+    }
 }
 
 .container {
@@ -182,7 +224,24 @@
 /* Table of Contents */
 .toc-section {
     padding: 4rem 0;
-    background: #f8fafc;
+    background: #fafafa;
+    position: relative;
+}
+
+/* Subtle Grid Background */
+.toc-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .toc-title {
@@ -227,9 +286,25 @@
 }
 
 .toc-link:hover {
-    color: #6366f1;
-    background: rgba(99, 102, 241, 0.1);
+    color: #000000;
+    background: rgba(0, 0, 0, 0.05);
     transform: translateX(5px);
+}
+
+.toc-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 2px;
+    background: #000000;
+    transform: translateY(-50%);
+    transition: width 0.3s ease;
+}
+
+.toc-link:hover::before {
+    width: 100%;
 }
 
 /* Featured Projects */
@@ -276,12 +351,13 @@
 .story-category,
 .story-year,
 .story-reading-time {
-    background: rgba(99, 102, 241, 0.1);
-    color: #6366f1;
+    background: rgba(0, 0, 0, 0.1);
+    color: #000000;
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
     font-size: 0.875rem;
     font-weight: 500;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .story-title {
@@ -298,9 +374,26 @@
 .story-chapter {
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: #f8fafc;
+    background: #fafafa;
     border-radius: 12px;
-    border-left: 4px solid #6366f1;
+    border-left: 4px solid #000000;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.story-chapter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.02);
+    transition: width 0.3s ease;
+}
+
+.story-chapter:hover::before {
+    width: 100%;
 }
 
 .story-chapter h4 {
@@ -349,15 +442,38 @@
 }
 
 .btn-primary {
-    background: #6366f1;
+    background: #000000;
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
-    border: none;
+    border: 2px solid #000000;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover {
+    background: #ffffff;
+    color: #000000;
+    border-color: #000000;
 }
 
 .btn-primary:hover {
@@ -367,22 +483,39 @@
 
 .btn-bookmark {
     background: transparent;
-    border: 2px solid #6366f1;
-    color: #6366f1;
+    border: 2px solid #000000;
+    color: #000000;
     padding: 0.75rem 1rem;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-bookmark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+}
+
+.btn-bookmark:hover::before {
+    left: 100%;
 }
 
 .btn-bookmark:hover {
-    background: #6366f1;
+    background: #000000;
     color: white;
 }
 
 .btn-bookmark.bookmarked {
-    background: #6366f1;
+    background: #000000;
     color: white;
 }
 
@@ -405,7 +538,7 @@
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    background: linear-gradient(90deg, #000000, #333333);
     width: 0%;
     transition: width 0.3s ease;
 }
